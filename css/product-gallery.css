@@ -1,0 +1,179 @@
+* {
+    --aside-element: 10rem;
+    --translateY: translateY(-150rem)
+}
+
+main {
+    padding: 30px 10px;
+    width: 100svw;
+    
+}
+
+/* Placement of main__header */
+
+.main__header-flex-container{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.main__h2{
+}
+
+.main__filter-dropdown{
+    margin-right: 15rem ;
+}   
+
+.main__filter-dropdown select{
+    padding: 0.3rem;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.main__filter-dropdown option{
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+/* Grid */
+/*  Grid for entire product gallery and aside advertisement */
+
+.main__product-container-grid {
+    display: grid;
+
+    grid-auto-flow: dense;
+    grid-auto-rows: 25rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) 10rem;
+    gap: 1.6rem;
+}
+
+/* Aside element positioning */
+.main__aside {
+
+    grid-row: 1/-7;
+    grid-column-end: -1;
+
+    background-repeat: repeat;
+    background: url('/images/ads/aside-advertisement.jpg'); 
+    background-size: contain;
+ }
+
+ /* Advertisement img positioning */
+ .main__aside-img{
+       object-fit: cover;
+       min-height: 25rem;
+       max-width: 10rem;
+    }
+
+/* Flexbox */
+/* Product item details positioning */
+.main__product-item-grid { 
+    /* This is also a flex container for the details of the product */
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-shadow: 0.0rem 0.1rem 0.1rem black;
+}
+
+
+.main__flex-child-img{
+    margin: 1rem;
+    object-fit: cover;
+    height: 18rem;
+    width: 14rem;
+    object-fit: contain;
+    background-color: white;
+
+    box-shadow: 0.1rem 0.1rem 0.8rem,  -0.1rem -0.1rem 0.8rem;
+}
+
+.main__flex-child-subtitle{
+
+}
+.main__flex-child-price{
+        margin: 0.7rem;
+}
+
+/* On hover there will be an overlay with a grey background and two <a> */
+/* First I translate everything away, then on hover it comes back with a transition delay */
+.main__flex-child-overlay{
+    position: absolute;
+    top: 1rem;
+    height: 18rem;
+    width: 14rem;
+    background: rgba(128, 128, 128, 0.242) ;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+
+    transform: translateY(-1500rem);
+}
+
+.main__flex-child-overlay a{
+    color: #fff;
+    text-decoration: none;
+    background: #343232;
+    margin: 0.5rem;
+    padding: 1rem 1.2rem;
+    font-size: 1.5rem;
+    transform: translateY(-1500rem);
+    transition: all 0.1s;
+
+    border-radius: 10%;
+}
+
+.main__flex-child-overlay a:hover{
+    color: gold
+}
+.main__product-flex-container:hover  .main__flex-child-overlay{
+    transform: translateY(0rem);
+}
+
+.main__product-flex-container:hover  .main__flex-child-overlay a{
+    transform: translateY(0rem);
+    transition-delay: calc(0.1s * var(--i));
+}
+
+.fa-cart-plus{
+    --i: 1
+}
+
+.fa-magnifying-glass{
+    --i: 2
+}
+
+
+@media (max-width: 560px) {
+
+    .main__product-container-grid{
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+
+    }
+
+    .main__aside{
+
+        grid-row: 4/5 ;
+        grid-column: 1/2;
+        
+        background-repeat: repeat;
+        object-fit: contain; 
+
+    }
+
+    .main__aside-img{
+        display: none;
+    }
+
+
+    .main__filter-dropdown{
+        margin-right: 2rem ;
+    }  
+
+}
+
+
