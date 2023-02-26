@@ -1,5 +1,3 @@
-
-
 // types of products
 
 export type Binding = {
@@ -8,15 +6,20 @@ export type Binding = {
     size: string[],
     type: string,
     price: number,
+    id: number,
+    image: string,
+
 }
 
 export type Snowboard = {
-    brand: string
-    model: string
-    size: string[]
-    terrain: string
-    personality: string
-    price: number
+    brand: string,
+    model: string,
+    size: string[],
+    terrain: string,
+    personality: string,
+    price: number,
+    id: number,   
+
     
 }
 
@@ -27,6 +30,8 @@ export type Helmet = {
         terrain: string;
         personality: string;
         price: number;
+        id: number,
+
       }
 
 export type Boot = {
@@ -34,6 +39,8 @@ export type Boot = {
     model: string;
     size: number;
     price: number;
+    id: number,
+
   }
 
 export type Goggle = {
@@ -41,6 +48,9 @@ export type Goggle = {
     model: string;
     reflective: boolean;
     price: number;
+    id: number,
+
+
   }
 
 // list of products
@@ -51,85 +61,107 @@ export const BindingsList: Binding[] = [
       model: "Custom Binding",
       size: ['L'],
       type: "Strap",
-      price: 199
-
-    },
+      price: 199,
+      id: 1001,
+      image: '/images/bindings/custom binding.jpg',    },
     {
       brand: "Burton",
       model: "Cartel Binding",
       size: ['L', 'M'],
       type: "Strap",
-      price: 269
+      price: 269,
+      id: 1002,
+      image: '/images/bindings/cartel binding.jpg'
     },
     {
       brand: "K2",
-      model: "Vo3 Snowboard Binding",
+      model: "Vo3 Binding",
       size: ['L', 'M'],
       type: "Strap",
-      price: 219
+      price: 219,
+      id: 1003,
+      image: '/images/bindings/k2-vo3.jpg',
     },
     {
       brand: "K2",
-      model: "Formula Snowboard Binding",
+      model: "Formula Binding",
       size: ['L'],
       type: "Strap",
-      price: 169
+      price: 169,
+      id: 1004,
+      image: '/images/bindings/k2-formula.jpg',
     },
     {
       brand: "Union",
-      model: "Atlas Snowboard Binding",
+      model: "Atlas Binding",
       size: ['L', 'M'],
       type: "Strap",
-      price: 229
+      price: 229,
+      id: 1005,
+      image: '/images/bindings/union-atlas.jpg',
     },
     {
       brand: "Union",
-      model: "Strata Snowboard Binding",
+      model: "Strata Binding",
       size: ['L'],
       type: "Strap",
-      price: 199
+      price: 199,
+      id: 1006,
+      image: '/images/bindings/union-strata.jpg',
     },
     {
-      brand: "Burton Step-On Bindings",
-      model: "Step-On Bindings",
+      brand: "Burton",
+      model: "Step-On Binding",
       size: ['L', 'M'],
       type: "Step-In",
-      price: 499.95
+      price: 499,
+      id: 1007,
+      image: '/images/bindings/Burton-Step-On-Bindings.jpg',
     },
     {
-      brand: "Burton Step-On Bindings",
-      model: "Hitchhiker Snowboard Bindings",
+      brand: "Burton Step-On ",
+      model: "Hitchhiker Binding",
       size: ['L', 'M'],
       type: "Step-In",
-      price: 449
+      price: 449,
+      id: 1008,
+      image: '/images/bindings/hitchhiking-stepon.jpg',
     },
     {
       brand: "Ride",
-      model: "Rodeo Snowboard Binding",
+      model: "Rodeo Binding",
       size: ['L'],
       type: "Strap",
-      price: 219
+      price: 219,
+      id: 1009,
+      image: '/images/bindings/ride-rodeo.jpg',
     },
     {
       brand: "Ride",
-      model: "Capo Snowboard Binding",
+      model: "Capo Binding",
       size: ['L'],
       type: "Strap",    
-      price:239
+      price:239,
+      id: 1010,
+      image: '/images/bindings/ride-capo.jpg',
     },
     {
       brand: "Rossignol",
-      model: "Foil Snowboard Binding",
+      model: "Gala Binding",
       size: ['L', 'M'],
       type: "Strap",
-      price: 209
+      price: 209,
+      id: 1011,
+      image: '/images/bindings/rosi-gala.jpg',
     },
     {
       brand: "Rossignol",
-      model: "District Snowboard Binding",
+      model: "Battle Binding",
       size: ['L', 'M'],
       type: "Strap",
-      price: 189
+      price: 189,
+      id: 1012,
+      image: '/images/bindings/rosi-battle.jpg',
     },
   ];
   
@@ -140,7 +172,8 @@ export const snowboardsList: Snowboard[] = [
       size: ['L'],
       terrain: "All-Mountain",
       personality: "Versatile",
-      price: 500
+      price: 500,
+      id: 2001
     },
     {
       brand: "Jones",
@@ -148,7 +181,8 @@ export const snowboardsList: Snowboard[] = [
       size: ['L', 'M'],
       terrain: "All-Mountain",
       personality: "Versatile",
-      price: 600 
+      price: 600,
+      id: 2002
     },
     {
       brand: "Gnu",
@@ -156,7 +190,8 @@ export const snowboardsList: Snowboard[] = [
       size: ['L', 'M'],
       terrain: "All-Mountain",
       personality: "Versatile",
-      price: 400
+      price: 400,
+      id: 2003
     },
     {
       brand: "K2",
@@ -164,7 +199,8 @@ export const snowboardsList: Snowboard[] = [
       size: ['L'],
       terrain: "All-Mountain",
       personality: "Aggressive",
-      price: 600 
+      price: 600,
+      id: 2004 
     },
     {
       brand: "Burton",
@@ -172,7 +208,8 @@ export const snowboardsList: Snowboard[] = [
       size: ['L'],
       terrain: "All-Mountain",
       personality: "Aggressive",
-      price: 600 
+      price: 600,
+      id: 2005 
     },
     {
       brand: "Arbor",
@@ -180,7 +217,8 @@ export const snowboardsList: Snowboard[] = [
       size: ['L', 'M'],
       terrain: "All-Mountain",
       personality: "Versatile",
-      price: 400
+      price: 400,
+      id: 2006
     },
     {
       brand: "Capita",
@@ -188,7 +226,8 @@ export const snowboardsList: Snowboard[] = [
       size: ['L', 'M'],
       terrain: "All-Mountain",
       personality: "Aggressive",
-      price: 600 
+      price: 600,
+      id: 2007 
     },
     {
       brand: "Ride",
@@ -196,7 +235,8 @@ export const snowboardsList: Snowboard[] = [
       size: ['L', 'M'],
       terrain: "All-Mountain",
       personality: "Aggressive",
-      price: 500
+      price: 500,
+      id: 2008
     },
     {
       brand: "Never Summer",
@@ -204,7 +244,8 @@ export const snowboardsList: Snowboard[] = [
       size: ['L'],
       terrain: "All-Mountain",
       personality: "Aggressive",
-      price: 500
+      price: 500,
+      id: 2009
     },
     {
       brand: "Salomon",
@@ -212,7 +253,8 @@ export const snowboardsList: Snowboard[] = [
       size: ['L'],
       terrain: "All-Mountain",
       personality: "Versatile",
-      price: 600
+      price: 600,
+      id: 2010
     }
   ];
   
@@ -223,7 +265,8 @@ export const helmetsList: Helmet[] = [
           size: "M",
           terrain: "All-Mountain",
           personality: "Adventurous",
-          price: 279
+          price: 279,
+          id: 3001
         },
         {
           brand: "Smith Optics",
@@ -231,7 +274,8 @@ export const helmetsList: Helmet[] = [
           size: "L",
           terrain: "All-Mountain",
           personality: "Sporty",
-          price: 79
+          price: 79,
+          id: 3002
         },
         {
           brand: "Giro",
@@ -239,7 +283,8 @@ export const helmetsList: Helmet[] = [
           size: "S",
           terrain: "Park",
           personality: "Cool",
-          price: 89
+          price: 89,
+          id: 3003
         },
         {
           brand: "Giro",
@@ -247,7 +292,8 @@ export const helmetsList: Helmet[] = [
           size: "L",
           terrain: "All-Mountain",
           personality: "Stylish",
-          price: 149
+          price: 149,
+          id: 3004
         },
         {
           brand: "Oakley",
@@ -255,7 +301,8 @@ export const helmetsList: Helmet[] = [
           size: "M",
           terrain: "All-Mountain",
           personality: "Innovative",
-          price: 230
+          price: 230,
+          id: 3005
         },
         {
           brand: "Oakley",
@@ -263,7 +310,8 @@ export const helmetsList: Helmet[] = [
           size: "L",
           terrain: "All-Mountain",
           personality: "Bold",
-          price: 130
+          price: 130,
+          id: 3006
         }
  
   ];
@@ -273,81 +321,85 @@ export const BootsList: Boot[] = [
       brand: "Atomic",
       model: "Hawx Ultra",
       size: 7.5,
-      price: 599
+      price: 599,
+      id: 4001
     },
     {
       brand: "Atomic",
       model: "Hawx Prime",
       size: 6.5,
-
-      price: 399
+      price: 399,
+      id: 4002
     },
     {
       brand: "Rossignol",
       model: "Alltrack Elite",
       size: 8.0,
-
-      price: 699
+      price: 699,
+      id: 4003
     },
     {
       brand: "Rossignol",
       model: "Track 80",
       size: 7.5,
-
-      price: 299
+      price: 299,
+      id: 4004
     },
     {
       brand: "Lange",
       model: "RX 120",
       size: 6.5,
-
-      price: 599
+      price: 599,
+      id: 4005
     },
     {
       brand: "Lange",
       model: "SX 70",
       size: 5.5,
-      price: 299
+      price: 299,
+      id: 4006
     },
     {
       brand: "Salomon",
       model: "S/Pro 120",
       size: 7.0,
-      price: 699
+      price: 699,
+      id: 4007
     },
     {
       brand: "Salomon",
       model: "QST Access Custom Heat",
       size: 8.5,
-
-      price: 599
+      price: 599,
+      id: 4008
     },
     {
       brand: "Nordica",
       model: "Speedmachine 130",
       size: 11,
-
-      price: 699
+      price: 699,
+      id: 4009
     },
     {
       brand: "Nordica",
       model: "Cruise 60",
       size: 10,
-
-      price: 249
+      price: 249,
+      id: 4010
     },
     {
       brand: "Tecnica",
       model: "Cochise 120",
       size: 7.5,
-
-      price: 599
+      price: 599,
+      id: 4011
     },
     {
       brand: "Tecnica",
       model: "Mach Sport HV 85",
       size: 6.5,
       price: 450,
+      id: 4012
     }
   ];
   
@@ -356,19 +408,22 @@ export const GogglesList: Goggle[] = [
       brand: "Oakley",
       model: "Flight Deck",
       reflective: true,
-      price: 200
+      price: 200,
+      id: 5001
     },
     {
       brand: "Smith",
       model: "I/O Mag",
       reflective: true,
-      price: 240
+      price: 240,
+      id: 5002
     },
     {
       brand: "Giro",
       model: "Contact",
       reflective: false,
-      price: 150
+      price: 150,
+      id: 5003
     }
   ];
 

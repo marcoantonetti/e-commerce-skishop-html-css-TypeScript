@@ -13,6 +13,7 @@ const populateGrid = (gallery: Binding[]) =>{
         
     })
 }
+
 populateGrid(BindingsList)
 
 
@@ -32,7 +33,7 @@ populateGrid(BindingsList)
 
 </div>*/
 
-function createProductLayout  (product: Snowboard | Goggle | Binding| Helmet | Boot ) {
+function createProductLayout  (product: Binding) {
 
     // Elements creation
     const flexContainer:HTMLDivElement       = document.createElement('div')
@@ -58,29 +59,27 @@ function createProductLayout  (product: Snowboard | Goggle | Binding| Helmet | B
     detail.className   = 'fa-solid fa-magnifying-glass'
 
     //Elements text attribute
-    title.textContent = product.brand || 'no terrain found';
+    title.textContent = product.brand;
     subtitle.textContent = product.model
     price.textContent = '$' + product.price.toString()
 
     //Elements aditional attributes
-    image.src = '/images/bindings/union-force (1).jpg'
+    image.src = product.image
     image.alt = product.brand + product.model
 
     shopCart.href = '#'
     detail.href = '#'
 
-    // Apending all elements to have a proper HTML structure    
+    // Apending all elements to have the proper HTML structure    
     containerGrid?.appendChild(flexContainer)
     flexContainer.appendChild(image)
     flexContainer.appendChild(title)
+    flexContainer.appendChild(subtitle)
     flexContainer.appendChild(price)
     flexContainer.appendChild(overlay)
 
     overlay.appendChild(shopCart)
     overlay.appendChild(detail)
-
-
-
 
 }
 
@@ -89,9 +88,3 @@ function createProductLayout  (product: Snowboard | Goggle | Binding| Helmet | B
 
 
 
-// let inputJob = document.createElement('input')
-// inputJob.type = 'text'
-// inputJob.setAttribute('name', `jobs${buttonCount}`)
-// inputJob.setAttribute('id', `jobs${buttonCount}`)
-// inputJob.setAttribute('placeholder', 'jobs')
-// div.appendChild(inputJob)

@@ -8,9 +8,9 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="../css/header.css"> 
-    <link rel="stylesheet" href="../css/product-landing.css">
+    <link rel="stylesheet" href="../css/product-gallery.css">
+    <link rel="stylesheet" href="../css/footer.css">
     <script src="https://kit.fontawesome.com/a494238601.js" crossorigin="anonymous"></script>
-
 
 </head>
 
@@ -39,23 +39,105 @@
             </ul>
         </nav>
     </header>
+
     <main>
-        <h2>Our shoes</h2>
-        <div class='container' id="container-shoes">
+        <aside class="">
+            
+        </aside>
+        <div class='main__header-flex-container'>
+
+        <h2 class="main__h2">Bindings</h2>
+        <div class="main__filter-dropdown">
+            <label for="main__select-filter"> sort by </label>
+            <select id="main__select-filter"> 
+                <option value="price"> Price </option>
+                <option value="price"> Size </option>
+                <option value="price"> Strap </option>
+                <option value="price"> Brand </option>
+            </select>
+        </div>
+
+        </div>
+
+        <div class='main__product-container-grid'>
+            <!-- <div class="main__product-item-grid main__product-flex-container">
+                
+                <img class='main__flex-child-img' src="/images/bindings/union-force (1).jpg" alt="binding"></img>
+                <h3 class='main__flex-child-title'>Burton</h3>
+                <h3 class='main__flex-child-subtitle'>Union Binding</h3>
+                <p class="main__flex-child-price">$600</p>
+
+
+                <div class="main__flex-child-overlay">
+                    <a href='#' class="fa-solid fa-cart-plus"></a>
+                    <a href='#' class="fa-solid fa-magnifying-glass"></a>
+                </div>
+
+            </div> -->
+                           
+            <aside class="main__aside-ad"> 
+                <img class='main__aside-img' id="one" src="/images/ads/aside-advertisement.jpg" alt="">
+            </aside>
             
         </div>
     </main>
 
-    <footer>
+    
 
-        <!--
-            Luego pondre contacto y ubicacion aqui
-        -->
+
+    <footer class="footer">
+
+        <div class="footer__flex-container">
+
+            <div class="footer__div-help-contact">
+
+                <div class="footer__div-contact">
+                    <h4 class="footer__h4">Contact</h4>
+                    <ul class="footer__ul-contact">
+                        <li class="footer__li-contact"><a class="footer__link" href="#">Order Status</a></li>
+                        <li class="footer__li-contact"><a class="footer__link" href="#">Delivery</a></li>
+                        <li class="footer__li-contact"><a class="footer__link" href="#">Returns</a></li>
+                        <li class="footer__li-contact"><a class="footer__link" href="#">Payments</a></li>
+                        <li class="footer__li-contact"><a class="footer__link" href="#">Warranty</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footer__div-help">
+
+                    <h4 class="footer__h4">Help</h4>
+                    <p class="footer__p-help"><a class="footer__link" href="#">Contact Us</a></p>
+                    
+                </div>
+
+         </div>
+
+            <div class="footer__div-social-links">
+    
+                <h4 class="footer__h4">Follow us on our social media!</h5>
+                <ul class="footer__ul-social_links">
+                    <li class="footer__li-social_links"> <a class="footer__link" href="#" style="--hover-color: rgb(0, 21, 248);"> <i class="fa fa-facebook footer__i-social-logo" aria-hidden="true"></i> Facebook</a></li>
+                    <li class="footer__li-social_links"> <a class="footer__link" href="#" style="--hover-color: rgb(8, 153, 210);"> <i class="fa fa-twitter footer__i-social-logo" aria-hidden="true"></i> Twitter</a></li>
+                    <li class="footer__li-social_links"> <a class="footer__link" href="#" style="--hover-color: rgb(162, 42, 186);"> <i class="fa fa-instagram footer__i-social-logo" aria-hidden="true"></i> Instagram</a></li>
+                    <li class="footer__li-social_links"> <a class="footer__link" href="#" style="--hover-color: rgb(49, 60, 187);"> <i class="fa fa-linkedin footer__i-social-logo" aria-hidden="true"></i> Linkedin</a></li>
+                </ul>
+            
+            </div>
+
+
+            <div class="footer__div-location">
+                <h4 class="footer__h4"> Location </h4>
+                <iframe class='footer__iframe' src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13614.55317647806!2d-64.16171408652343!3d-31.451623305147386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1677119292010!5m2!1ses!2sar" width="350" height="250" style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+            </div>
+        </div>
+
+        <p class="footer__rights-reserved"> @ All rights reserved</p>
+
 
     </footer>
 
 
+    <script type="module" src="../dist/index.js" defer></script>
 
 </body>
-
 </html>

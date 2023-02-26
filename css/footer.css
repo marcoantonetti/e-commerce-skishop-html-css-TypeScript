@@ -1,0 +1,149 @@
+
+.footer{
+    min-height: auto;
+    color: white;
+    background-color: rgb(82, 80, 80);
+
+    font-size: large;
+}
+
+.footer__h4{
+    font-size: 1.25rem;
+
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+.footer__link{
+    position: relative;
+    text-decoration: none;
+    color: white;
+        
+}
+
+.footer__i-social-logo{
+    position: relative;
+    top: 0.1rem;
+}
+
+/* I added a bit of box-modelling to this flex positions*/
+.footer__flex-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.footer__div-help-contact{
+    display: flex;
+    gap: 2rem;
+
+    padding: 3rem;
+
+}
+
+.footer__ul-contact{
+    display: flex;
+    flex-direction: column;
+    gap:0.3rem
+    
+}
+
+.footer__li-contact{
+    list-style-type: none;
+}
+
+
+.footer__div-social-links{
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 0 3rem 0rem;
+
+    gap: 2rem;
+}
+
+
+.footer__ul-social_links{
+    display: flex;
+    
+    align-items: center;
+    justify-content: center;
+    
+    flex-wrap: wrap;
+    
+    
+    gap: 1rem;
+}
+
+
+.footer__li-social_links{
+    list-style-type: none;
+
+    padding: 0.5rem;
+
+    border: solid 2px rgb(176, 163, 146);
+    border-radius: 10%;
+
+    vertical-align: center;
+    
+}
+
+.footer__li-social_links:hover{
+    background-color: rgb(223, 216, 209);
+    /* transform: scale(1.1); */
+
+    }
+
+
+.footer__li-social_links:hover .footer__link{
+    color: var(--hover-color); /* vars are declared on the html tag*/
+
+}
+
+.footer__div-location{
+    margin: 1.3rem ;
+    
+}
+
+.footer__rights-reserved{
+    text-align: center;
+    padding: 0 3rem 1rem 0
+}
+
+@media (max-width:970px){
+
+
+
+    .footer__flex-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    
+    }
+
+ .footer__div-location{
+
+    margin: 0;
+    padding: 0;
+
+}
+
+.footer__rights-reserved{
+    padding: 1rem 0;
+}
+
+.footer__div-social-links{
+    margin-left: 0;
+}
+
+
+ 
+}
+
+
+
+
+
+
+

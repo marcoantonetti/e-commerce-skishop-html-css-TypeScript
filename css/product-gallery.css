@@ -1,11 +1,11 @@
 * {
     --aside-element: 10rem;
-    --translateY: translateY(-150rem)
+
+
 }
 
 main {
     padding: 30px 10px;
-    width: 100svw;
     
 }
 
@@ -44,18 +44,19 @@ main {
     grid-auto-flow: dense;
     grid-auto-rows: 25rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) 10rem;
-    gap: 1.6rem;
+    gap: 2rem;
 }
 
 /* Aside element positioning */
-.main__aside {
+.main__aside-ad {
 
-    grid-row: 1/-7;
+    grid-row: 1/-4;
     grid-column-end: -1;
 
     background-repeat: repeat;
     background: url('/images/ads/aside-advertisement.jpg'); 
     background-size: contain;
+
  }
 
  /* Advertisement img positioning */
@@ -75,9 +76,12 @@ main {
     flex-direction: column;
     align-items: center;
 
-    box-shadow: 0.0rem 0.1rem 0.1rem black;
+    box-shadow: 0.0rem 0.1rem 0.2rem black;
 }
 
+.main__product-item-grid:hover{
+    transform: scale(1.1);
+}
 
 .main__flex-child-img{
     margin: 1rem;
@@ -87,7 +91,7 @@ main {
     object-fit: contain;
     background-color: white;
 
-    box-shadow: 0.1rem 0.1rem 0.8rem,  -0.1rem -0.1rem 0.8rem;
+    box-shadow: 0.1rem 0.1rem 0.8rem black,  -0.1rem -0.1rem 0.8rem black;
 }
 
 .main__flex-child-subtitle{
@@ -104,14 +108,16 @@ main {
     top: 1rem;
     height: 18rem;
     width: 14rem;
-    background: rgba(128, 128, 128, 0.242) ;
+    background: rgba(46, 46, 46, 0.242) ;
 
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 0.5rem;
 
-    transform: translateY(-1500rem);
+    transform: translateY(-400rem);
+    transition: all 0.1s ;
+
 }
 
 .main__flex-child-overlay a{
@@ -121,8 +127,9 @@ main {
     margin: 0.5rem;
     padding: 1rem 1.2rem;
     font-size: 1.5rem;
-    transform: translateY(-1500rem);
-    transition: all 0.1s;
+    transform: translateY(-400rem);
+
+    transition: all 0.1s ;
 
     border-radius: 10%;
 }
@@ -132,12 +139,14 @@ main {
 }
 .main__product-flex-container:hover  .main__flex-child-overlay{
     transform: translateY(0rem);
+
 }
 
 .main__product-flex-container:hover  .main__flex-child-overlay a{
     transform: translateY(0rem);
     transition-delay: calc(0.1s * var(--i));
 }
+
 
 .fa-cart-plus{
     --i: 1
@@ -148,6 +157,26 @@ main {
 }
 
 
+/* Media queries */
+@media (max-width: 1180px){
+    .main__aside-ad{
+        grid-row: 1/-6;
+    }
+}
+
+@media (max-width: 950px){
+    .main__aside-ad{
+        grid-row: 1/-7;
+    }
+}
+
+@media (max-width: 730px){
+    .main__aside-ad{
+        grid-row: 1/-13;
+    }
+    
+}
+
 @media (max-width: 560px) {
 
     .main__product-container-grid{
@@ -155,25 +184,25 @@ main {
 
     }
 
-    .main__aside{
+    /* Changing ad position */
+    .main__aside-ad{
 
         grid-row: 4/5 ;
         grid-column: 1/2;
         
-        background-repeat: repeat;
+        background-repeat: no-repeat;
         object-fit: contain; 
+        margin-left: 9rem;
+
+
 
     }
-
-    .main__aside-img{
-        display: none;
-    }
-
 
     .main__filter-dropdown{
         margin-right: 2rem ;
     }  
 
 }
+
 
 
