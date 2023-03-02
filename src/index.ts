@@ -83,6 +83,17 @@ function createProductLayout  (product: Binding) {
 
 }
 
+// Code for HamburguerButton click event. When clicked, it toggles header__nav-bar-ul-left active class
+const hamburguerButton = document.querySelector<HTMLSpanElement>('.header__hamburguer-button')
+const navBar = document.querySelector<HTMLUListElement>('.header__nav-bar-ul-left')
+
+hamburguerButton?.addEventListener('click', (e) => {
+    e.preventDefault()
+
+    navBar?.classList.toggle('active')
+
+
+})
 
 
 

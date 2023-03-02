@@ -39,4 +39,10 @@ function createProductLayout(product) {
     overlay.appendChild(shopCart);
     overlay.appendChild(detail);
 }
+var hamburguerButton = document.querySelector('.header__hamburguer-button');
+var navBar = document.querySelector('.header__nav-bar-ul-left');
+hamburguerButton === null || hamburguerButton === void 0 ? void 0 : hamburguerButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    navBar === null || navBar === void 0 ? void 0 : navBar.classList.toggle('active');
+});
 //# sourceMappingURL=index.js.map

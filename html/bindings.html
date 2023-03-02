@@ -15,17 +15,21 @@
 
 
 </head>
-
 <body>
     <header>
 
         <h1 class="header__h1"><a class="header__link" href="../index.html">SNOWDEVIL.</a></h1>
-
+        
         <nav class="header__nav-bar">
-            <input type="checkbox" id="check">
-            <label for="check" ><i class="fas fa-bars"> </i></label>
-            <ul class ='header__nav-bar-ul' id="header__left-nav-bar-ul">
 
+            <a href="#" class="header__hamburguer-button">
+                <span class="header__hamburguer-bar"></span>
+                <span class="header__hamburguer-bar"></span>
+                <span class="header__hamburguer-bar"></span>
+            </a>
+           
+            <ul class ='header__nav-bar-ul-left'>
+                
                 <li class="header__nav-bar-li"><a class="header__link" href="snowboards.html">Snowboards</a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="bindings.html">Bindings</a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="boots.html">Boots</a></li>
@@ -33,10 +37,10 @@
                 <li class="header__nav-bar-li"><a class="header__link" href="goggles.html">Goggles</a></li>
             </ul>
 
-            <ul class ='header__nav-bar-ul' id='header__right-nav-bar-ul'>
+            <ul class ='header__nav-bar-ul-right' >
 
                 <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li class="header__nav-bar-li"><a class="header__link" href=".footer"><i class="fa-solid fa-location-dot"></i></a></li>
+                <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i class="fa-solid fa-location-dot"></i></a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i class="fa-solid fa-user"></i></a></li>
                 
@@ -44,13 +48,15 @@
         </nav>
     </header>
 
-    <main>
-
+    <main >
+        <aside class="main__aside-horizontal-ad">
+                        
+        </aside>
         <div class='main__header-flex-container'>
 
         <h2 class="main__h2">Bindings</h2>
         <div class="main__filter-dropdown">
-            <label for="main__select-filter"> sort by </label>
+            <label for="main__select-filter"> Sort By </label>
             <select id="main__select-filter"> 
                 <option value="price"> Price </option>
                 <option value="price"> Size </option>
@@ -62,7 +68,6 @@
         </div>
 
         <div class='main__product-container-grid'>
-            <!-- Template of what createProductLayout() function does-->
             <!-- <div class="main__product-item-grid main__product-flex-container">
                 
                 <img class='main__flex-child-img' src="/images/bindings/union-force (1).jpg" alt="binding"></img>
@@ -78,7 +83,7 @@
 
             </div> -->
                            
-            <aside class="main__aside-ad"> 
+            <aside class="main__aside-vertical-ad"> 
             </aside>
             
         </div>
@@ -93,22 +98,22 @@
 
             <div class="footer__div-help-contact">
 
-                <div class="footer__div-contact">
-                    <h4 class="footer__h4">Contact</h4>
-                    <ul class="footer__ul-contact">
-                        <li class="footer__li-contact"><a class="footer__link" href="#">Order Status</a></li>
-                        <li class="footer__li-contact"><a class="footer__link" href="#">Delivery</a></li>
-                        <li class="footer__li-contact"><a class="footer__link" href="#">Returns</a></li>
-                        <li class="footer__li-contact"><a class="footer__link" href="#">Payments</a></li>
-                        <li class="footer__li-contact"><a class="footer__link" href="#">Warranty</a></li>
+                <div class="footer__div-help">
+                    <h4 class="footer__h4">Help</h4>
+                    <ul class="footer__ul-help">
+                        <li class="footer__li-help"><a class="footer__link" href="#">Order Status</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="#">Delivery</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="#">Returns</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="#">Payments</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="#">Warranty</a></li>
                     </ul>
 
                 </div>
 
-                <div class="footer__div-help">
+                <div class="footer__div-contact">
 
-                    <h4 class="footer__h4">Help</h4>
-                    <p class="footer__p-help"><a class="footer__link" href="#">Contact Us</a></p>
+                    <h4 class="footer__h4">Contact</h4>
+                    <p class="footer__p-contact"><a class="footer__link" href="#">Contact Us</a></p>
                     
                 </div>
 
@@ -137,7 +142,6 @@
 
 
     </footer>
-
 
 
     <script type="module" src="../dist/index.js" defer></script>

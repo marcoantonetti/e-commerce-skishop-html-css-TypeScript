@@ -1,36 +1,30 @@
-* {
-    --aside-element: 10rem;
-
-
-}
-
 main {
-    padding: 30px 10px;
+    padding: 2rem 1rem;
     
+
 }
 
 /* Placement of main__header */
 
-.main__header-flex-container{
+.main__header-flex-container {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1.5rem;
 }
 
-.main__h2{
+.main__h2 {}
+
+.main__filter-dropdown {
+    margin-right: 15rem;
 }
 
-.main__filter-dropdown{
-    margin-right: 15rem ;
-}   
-
-.main__filter-dropdown select{
+.main__filter-dropdown select {
     padding: 0.3rem;
     font-weight: bold;
     font-size: 1rem;
 }
 
-.main__filter-dropdown option{
+.main__filter-dropdown option {
     font-weight: bold;
     font-size: 1rem;
 }
@@ -42,73 +36,99 @@ main {
     display: grid;
 
     grid-auto-flow: dense;
-    grid-auto-rows: 25rem;
-    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) 10rem;
+    grid-auto-rows: 27rem;
+    grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) 12rem;
     gap: 2rem;
+    margin-bottom: 5rem;
 }
 
-/* Aside element positioning */
-.main__aside-ad {
+
+/* Aside (advertisements) elements positioning */
+.main__aside-vertical-ad {
 
     grid-row: 1/-4;
     grid-column-end: -1;
 
+    background: url('/images/ads/vertical-ad.jpg ');
+
+    background-size: 100% 25rem;
     background-repeat: repeat;
-    background: url('/images/ads/aside-advertisement.jpg'); 
-    background-size: contain;
 
- }
 
- /* Advertisement img positioning */
- .main__aside-img{
-       object-fit: cover;
-       min-height: 25rem;
-       max-width: 10rem;
-    }
+
+
+
+}
+
+.main__aside-horizontal-ad {
+    background-image: url("/images/ads/vertical-ad3.jpg");
+
+    padding: 4rem;
+
+    background-position: 55% 45%;
+    background-size: 90% 15rem;
+    background-repeat: no-repeat;
+
+
+    margin-bottom: 3rem;
+    margin-top: -1rem;
+
+
+}
 
 /* Flexbox */
 /* Product item details positioning */
-.main__product-item-grid { 
+.main__product-item-grid {
     /* This is also a flex container for the details of the product */
     position: relative;
     z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
+    
 
     box-shadow: 0.0rem 0.1rem 0.2rem black;
 }
 
-.main__product-item-grid:hover{
+.main__product-item-grid:hover {
     transform: scale(1.1);
 }
 
-.main__flex-child-img{
+.main__flex-child-img {
     margin: 1rem;
-    object-fit: cover;
     height: 18rem;
     width: 14rem;
     object-fit: contain;
     background-color: white;
 
-    box-shadow: 0.1rem 0.1rem 0.8rem black,  -0.1rem -0.1rem 0.8rem black;
+    box-shadow: 0.1rem 0.1rem 0.8rem black, -0.1rem -0.1rem 0.8rem black;
 }
 
-.main__flex-child-subtitle{
+.main__flex-child-title{
+    position: absolute;
+    bottom: 5.5rem;
+}
+
+.main__flex-child-subtitle {
+   
+    position: absolute;
+    bottom: 4.1rem;
 
 }
-.main__flex-child-price{
-        margin: 0.7rem;
+
+.main__flex-child-price {
+position: absolute;
+bottom: 1rem;
 }
 
 /* On hover there will be an overlay with a grey background and two <a> */
 /* First I translate everything away, then on hover it comes back with a transition delay */
-.main__flex-child-overlay{
+.main__flex-child-overlay {
     position: absolute;
     top: 1rem;
     height: 18rem;
     width: 14rem;
-    background: rgba(46, 46, 46, 0.242) ;
+    background: rgba(46, 46, 46, 0.242);
 
     display: flex;
     justify-content: center;
@@ -116,11 +136,11 @@ main {
     gap: 0.5rem;
 
     transform: translateY(-400rem);
-    transition: all 0.1s ;
+    transition: all 0.1s;
 
 }
 
-.main__flex-child-overlay a{
+.main__flex-child-overlay a {
     color: #fff;
     text-decoration: none;
     background: #343232;
@@ -129,80 +149,92 @@ main {
     font-size: 1.5rem;
     transform: translateY(-400rem);
 
-    transition: all 0.1s ;
+    transition: all 0.1s;
 
     border-radius: 10%;
 }
 
-.main__flex-child-overlay a:hover{
+.main__flex-child-overlay a:hover {
     color: gold
 }
-.main__product-flex-container:hover  .main__flex-child-overlay{
+
+.main__product-flex-container:hover .main__flex-child-overlay {
     transform: translateY(0rem);
 
 }
 
-.main__product-flex-container:hover  .main__flex-child-overlay a{
+.main__product-flex-container:hover .main__flex-child-overlay a {
     transform: translateY(0rem);
     transition-delay: calc(0.1s * var(--i));
 }
 
 
-.fa-cart-plus{
+.fa-cart-plus {
     --i: 1
 }
 
-.fa-magnifying-glass{
+.fa-magnifying-glass {
     --i: 2
 }
 
 
 /* Media queries */
-@media (max-width: 1180px){
-    .main__aside-ad{
-        grid-row: 1/-6;
+@media (max-width: 1280px) {
+    .main__aside-vertical-ad {
+        grid-row: 1/5;
     }
+
 }
 
-@media (max-width: 950px){
-    .main__aside-ad{
-        grid-row: 1/-7;
-    }
-}
-
-@media (max-width: 730px){
-    .main__aside-ad{
-        grid-row: 1/-13;
+@media (max-width: 990px) {
+    .main__aside-vertical-ad {
+        grid-row: 1/7;
     }
     
+    @media (max-width: 730px) {
+        .main__aside-horizontal-ad {
+                background-size: 100%;
+                
+            }
+        .main__aside-vertical-ad {
+            grid-row: 1/13;
+        }
+
+    }
 }
 
-@media (max-width: 560px) {
+@media (max-width: 570px) {
+    
 
-    .main__product-container-grid{
+    .main__product-container-grid {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
     }
 
     /* Changing ad position */
-    .main__aside-ad{
+    .main__aside-vertical-ad {
 
-        grid-row: 4/5 ;
+        grid-row: 5/6;
         grid-column: 1/2;
-        
+
         background-repeat: no-repeat;
-        object-fit: contain; 
-        margin-left: 9rem;
+
+        background-position: center;
+        background-size: contain;
+
 
 
 
     }
 
-    .main__filter-dropdown{
-        margin-right: 2rem ;
-    }  
+    .main__aside-horizontal-ad {
+
+        background-size: 100% ;
+        
+    }
+
+    .main__filter-dropdown {
+        margin-right: 2rem;
+    }
 
 }
-
-
-

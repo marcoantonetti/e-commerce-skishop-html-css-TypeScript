@@ -1,23 +1,25 @@
 
 .footer{
     min-height: auto;
-    color: white;
+    color: rgb(237, 223, 223);
     background-color: rgb(82, 80, 80);
 
     font-size: large;
 }
 
 .footer__h4{
+
     font-size: 1.25rem;
 
     margin-bottom: 0.5rem;
     text-align: center;
+    color: white;
 }
 
 .footer__link{
     position: relative;
     text-decoration: none;
-    color: white;
+    color: rgb(235, 229, 229);
         
 }
 
@@ -42,15 +44,20 @@
 
 }
 
-.footer__ul-contact{
+.footer__ul-help{
     display: flex;
     flex-direction: column;
     gap:0.3rem
     
 }
 
-.footer__li-contact{
+.footer__li-help{
     list-style-type: none;
+}
+
+/*Codigo repetitivo fijate que hacer*/
+.footer__p-contact:hover .footer__link, .footer__li-help:hover .footer__link{
+    color: white;
 }
 
 
@@ -91,7 +98,7 @@
 
 .footer__li-social_links:hover{
     background-color: rgb(223, 216, 209);
-    /* transform: scale(1.1); */
+    transform: scale(1.1);
 
     }
 
@@ -104,6 +111,10 @@
 .footer__div-location{
     margin: 1.3rem ;
     
+}
+
+.footer__iframe:hover{
+    transform: scale(1.1);
 }
 
 .footer__rights-reserved{
