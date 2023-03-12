@@ -1,6 +1,15 @@
 "use strict";
+var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
+    if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
+        if (ar || !(i in from)) {
+            if (!ar) ar = Array.prototype.slice.call(from, 0, i);
+            ar[i] = from[i];
+        }
+    }
+    return to.concat(ar || Array.prototype.slice.call(from));
+};
 exports.__esModule = true;
-var obj = require("./objects");
+var objects_js_1 = require("./objects.js");
 var containerGrid = document.querySelector('.main__product-container-grid');
 // This function populates the grid gallery with multiple products layouts
 var populateGrid = function (gallery) {
@@ -8,7 +17,10 @@ var populateGrid = function (gallery) {
         createProductLayout(product);
     });
 };
-populateGrid(obj.BindingsList);
+var navBarLinks = document.querySelector('.header__nav-bar-ul-left');
+var linksList = __spreadArray([], navBarLinks.querySelectorAll('.header__link'), true);
+console.log(__spreadArray([], navBarLinks.querySelectorAll('.header__link'), true));
+populateGrid(objects_js_1.BindingsList);
 // This function created an HTML structure such as this one. Which can be seen in the html file
 /*<div class="main__product-item-grid main__product-flex-container">
                 
@@ -23,7 +35,7 @@ populateGrid(obj.BindingsList);
             </div>
 
 </div>*/
-var createProductLayout = function (product) {
+function createProductLayout(product) {
     // Elements creation
     var flexContainer = document.createElement('div');
     var image = document.createElement('img');
@@ -43,26 +55,35 @@ var createProductLayout = function (product) {
     shopCart.className = 'fa-solid fa-cart-plus';
     detail.className = 'fa-solid fa-magnifying-glass';
     //Elements text attribute
-    title.textContent = product.brand || 'no terrain found';
+    title.textContent = product.brand;
     subtitle.textContent = product.model;
     price.textContent = '$' + product.price.toString();
     //Elements aditional attributes
-    image.src = '/images/bindings/union-force (1).jpg';
+    image.src = product.image;
     image.alt = product.brand + product.model;
     shopCart.href = '#';
     detail.href = '#';
-    // Apending all elements to have a proper HTML structure    
+    // Apending all elements to have the proper HTML structure    
     containerGrid === null || containerGrid === void 0 ? void 0 : containerGrid.appendChild(flexContainer);
     flexContainer.appendChild(image);
     flexContainer.appendChild(title);
+    flexContainer.appendChild(subtitle);
     flexContainer.appendChild(price);
     flexContainer.appendChild(overlay);
     overlay.appendChild(shopCart);
     overlay.appendChild(detail);
-};
-// let inputJob = document.createElement('input')
-// inputJob.type = 'text'
-// inputJob.setAttribute('name', `jobs${buttonCount}`)
-// inputJob.setAttribute('id', `jobs${buttonCount}`)
-// inputJob.setAttribute('placeholder', 'jobs')
-// div.appendChild(inputJob)
+}
+// Code for HamburguerButton click event. When clicked, it toggles header__nav-bar-ul-left active class
+var hamburguerButton = document.querySelector('.header__hamburguer-button');
+var navBar = document.querySelector('.header__nav-bar-ul-left');
+hamburguerButton === null || hamburguerButton === void 0 ? void 0 : hamburguerButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    navBar === null || navBar === void 0 ? void 0 : navBar.classList.toggle('active');
+    hamburguerButton.classList.toggle('active');
+});
+var searchBar = document.querySelector('.header__search-bar-toggle');
+var glassLogo = document.querySelector('.fa-magnifying-glass');
+glassLogo === null || glassLogo === void 0 ? void 0 : glassLogo.addEventListener('click', function () {
+    searchBar === null || searchBar === void 0 ? void 0 : searchBar.classList.toggle('active');
+    console.log('sd');
+});

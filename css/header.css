@@ -1,21 +1,25 @@
 *{
     box-sizing: border-box;
     
-    --background-color: rgb(17, 16, 16);
-
+    --background-color: rgb(26, 24, 24);
+  
     
     margin: 0;
     padding: 0;
 
+
 }
 
 body{
+    /* background: linear-gradient(to right, rgb(57, 140, 234), rgb(193, 221, 242)  , rgb(171, 202, 238)); */
+    background: linear-gradient(to right, rgb(57, 140, 234), rgb(141, 190, 230)  , rgb(190, 208, 227));
     font-size: 1rem;
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, rgb(57, 140, 234), rgb(193, 221, 242)  , rgb(171, 202, 238));
-    
     width: 100vw;
     overflow-x:hidden;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-stretch: wider;
+
     
 
 
@@ -24,9 +28,8 @@ header {
     background-color: rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
-
     position: sticky;
-    top: -95px;
+    top: -90px;
     z-index: 2;
 
 
@@ -74,6 +77,9 @@ header {
     display: flex;
     gap: 1rem;
     margin-right: 20px;
+
+    position: relative; /*Relative for search-bar-active*/
+
 }
 
 /*nav bar buttons*/
@@ -90,8 +96,12 @@ header {
     border-radius: 0.25rem;
     padding: 5px;
 
+    transition: all 0.3s;
+
 
 }
+
+
 
 .header__nav-bar-li:hover, .header__hamburguer-button:hover{
 
@@ -106,13 +116,14 @@ header {
 
 }
 
+
 /* Styles for the hamburguer button on mobile menu */
 
 .header__hamburguer-button{
         color: white;
         position: absolute;
         left: 25px;
-        top: 12px;
+        top: 20px;
 
 
         display: flex;
@@ -122,7 +133,7 @@ header {
         
         gap: 0.2rem;
 
-        height: 2rem;
+        height: 1.5rem;
         width: 2.3rem;
 
         
@@ -133,10 +144,32 @@ header {
 
     background-color: white;
     height: 0.2rem;
-    width: 100%;
+    width: 90%;
     border-radius: 0.5rem;
 }
 
+/*Active search bar on click*/
+.header__search-bar-toggle{
+    width: 10rem;
+    height: 2rem;
+    padding-left: 0.5rem;
+    
+    position: absolute;/*relative to header__nav-bar-ul-right*/
+    right: 12rem;
+    bottom: 1rem;
+
+    transition: all 1s;
+    transform: translateY(-100rem);
+    font-size: 1rem;
+
+    background-color: rgb(250, 245, 245);
+    border-radius: 0.25rem;
+
+}
+
+.header__search-bar-toggle.active{
+    transform: translateY(0rem);
+}
 
 
 
@@ -156,11 +189,9 @@ header {
         gap: 0.5rem;
         margin-left: 2.5rem;
 
+
     }
     
-    /* .header__nav-bar-ul-left{
-        display: none;
-    } */   
     
     /* Creating the nav bar and moving it away until hamburguer button is press */
     .header__nav-bar-ul-left{
@@ -171,7 +202,9 @@ header {
         order: 1; /*So that it shows up after the right nav bar (icons) */
 
         transform: translateX(-100rem);
-        transition: 0.6s ease-out ;
+        transition: 0.3s ease-out ;
+
+
         
 
 
@@ -188,21 +221,49 @@ header {
 
         /* display: flex; */
         transform: translateX(0rem);
-        transition: 0.4 ease-in ;
+        transition: all 0.3 ease-in ;
 
 
 
     }
-
-     /* .header__nav-bar-li{
-
-        
-    }
-  */
-
+    
     .header__hamburguer-bar{
         
         display: block;
+        transition: 0.3s;
+
     
 }
+
+    /* Bars to cross transition. 2nd bar will not show while 1st and 2rd will rotate*/
+    .header__hamburguer-button.active .header__hamburguer-bar:nth-child(2){
+
+        opacity: 0;
+        transition: 0.2s;
+
+
+    }
+
+    .header__hamburguer-button.active .header__hamburguer-bar:nth-child(1){
+
+        transform: translateY(00.53rem) rotate(45deg);
+        transition: 0.2s;
+        
+
+    }
+
+    .header__hamburguer-button.active .header__hamburguer-bar:nth-child(3){
+
+        transform: translateY(-00.53rem) rotate(-45deg);
+        transition: 0.2s;
+
+
+    }
+
+    .header__search-bar-toggle{
+        z-index: 10;
+        right: 3rem;
+        top: 1rem;
+    }
+    
 }

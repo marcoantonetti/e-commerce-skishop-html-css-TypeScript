@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Snowdevil</title>
 
 
     <link rel="stylesheet" href="../css/header.css"> 
@@ -30,17 +30,17 @@
            
             <ul class ='header__nav-bar-ul-left'>
                 
-                <li class="header__nav-bar-li"><a class="header__link" href="snowboards.html">Snowboards</a></li>
+                <li class="header__nav-bar-li" ><a class="header__link" id="snowboards" href="snowboards.html">Snowboards</a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="bindings.html">Bindings</a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="boots.html">Boots</a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="helmets.html">Helmets</a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="goggles.html">Goggles</a></li>
             </ul>
-
+            <input type="text" placeholder="Search items" class="header__search-bar-toggle">
             <ul class ='header__nav-bar-ul-right' >
 
-                <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i class="fa-solid fa-location-dot"></i></a></li>
+                <li class="header__nav-bar-li header__link"><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li class="header__nav-bar-li"><a class="header__link" href="store-info.html"><i class="fa-solid fa-location-dot"></i></a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i class="fa-solid fa-user"></i></a></li>
                 
@@ -92,6 +92,7 @@
     
 
 
+   
     <footer class="footer">
 
         <div class="footer__flex-container">
@@ -101,11 +102,11 @@
                 <div class="footer__div-help">
                     <h4 class="footer__h4">Help</h4>
                     <ul class="footer__ul-help">
-                        <li class="footer__li-help"><a class="footer__link" href="#">Order Status</a></li>
-                        <li class="footer__li-help"><a class="footer__link" href="#">Delivery</a></li>
-                        <li class="footer__li-help"><a class="footer__link" href="#">Returns</a></li>
-                        <li class="footer__li-help"><a class="footer__link" href="#">Payments</a></li>
-                        <li class="footer__li-help"><a class="footer__link" href="#">Warranty</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="store-info.html">Order Status</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="store-info.html">Delivery</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="store-info.html">Returns</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="store-info.html">Payments</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="store-info.html">Warranty</a></li>
                     </ul>
 
                 </div>
@@ -113,36 +114,52 @@
                 <div class="footer__div-contact">
 
                     <h4 class="footer__h4">Contact</h4>
-                    <p class="footer__p-contact"><a class="footer__link" href="#">Contact Us</a></p>
-                    
+                    <p class="footer__p-contact"><a class="footer__link" href="store-info.html">Contact Us</a></p>
+
                 </div>
 
-         </div>
+            </div>
 
             <div class="footer__div-social-links">
-    
+
                 <h4 class="footer__h4">Follow us on our social media!</h5>
-                <ul class="footer__ul-social_links">
-                    <li class="footer__li-social_links"> <a class="footer__link" href="#" style="--hover-color: rgb(0, 21, 248);"> <i class="fa fa-facebook footer__i-social-logo" aria-hidden="true"></i> Facebook</a></li>
-                    <li class="footer__li-social_links"> <a class="footer__link" href="#" style="--hover-color: rgb(8, 153, 210);"> <i class="fa fa-twitter footer__i-social-logo" aria-hidden="true"></i> Twitter</a></li>
-                    <li class="footer__li-social_links"> <a class="footer__link" href="#" style="--hover-color: rgb(162, 42, 186);"> <i class="fa fa-instagram footer__i-social-logo" aria-hidden="true"></i> Instagram</a></li>
-                    <li class="footer__li-social_links"> <a class="footer__link" href="#" style="--hover-color: rgb(49, 60, 187);"> <i class="fa fa-linkedin footer__i-social-logo" aria-hidden="true"></i> Linkedin</a></li>
-                </ul>
-            
+                    <ul class="footer__ul-social_links">
+                        <li class="footer__li-social_links"> <a class="footer__link" href="#"
+                                style="--hover-color: rgb(0, 21, 248);"> <i
+                                    class="fa fa-facebook footer__i-social-logo" aria-hidden="true"></i>
+                                Facebook</a></li>
+                        <li class="footer__li-social_links"> <a class="footer__link" href="#"
+                                style="--hover-color: rgb(8, 153, 210);"> <i
+                                    class="fa fa-twitter footer__i-social-logo" aria-hidden="true"></i> Twitter</a>
+                        </li>
+                        <li class="footer__li-social_links"> <a class="footer__link" href="#"
+                                style="--hover-color: rgb(162, 42, 186);"> <i
+                                    class="fa fa-instagram footer__i-social-logo" aria-hidden="true"></i>
+                                Instagram</a></li>
+                        <li class="footer__li-social_links"> <a class="footer__link" href="#"
+                                style="--hover-color: rgb(49, 60, 187);"> <i
+                                    class="fa fa-linkedin footer__i-social-logo" aria-hidden="true"></i>
+                                Linkedin</a></li>
+                    </ul>
+
             </div>
 
 
             <div class="footer__div-location">
                 <h4 class="footer__h4"> Location </h4>
-                <iframe class='footer__iframe' src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d13614.55317647806!2d-64.16171408652343!3d-31.451623305147386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2sar!4v1677119292010!5m2!1ses!2sar" width="350" height="250" style="border:0; border-radius: 1rem;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>            </div>
+
+                <iframe class='footer__iframe'
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1739.215208651252!2d-105.97156502204766!3d39.606372219954245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876a51468ce83f23%3A0xcca362053e21015f!2sKeystone%20Adventure%20Center!5e0!3m2!1ses!2sar!4v1677875898642!5m2!1ses!2sar"
+                    width="350" height="250" style="border:0; border-radius: 1rem;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
+        </div>
         </div>
 
         <p class="footer__rights-reserved"> @ All rights reserved</p>
 
 
     </footer>
-
 
     <script type="module" src="../dist/index.js" defer></script>
 

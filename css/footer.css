@@ -1,8 +1,14 @@
+*{
+    --grey-background: rgb(82, 80, 80);
+    --white-color: rgb(255, 255, 255);
+    --lightgrey-color-text: rgb(235, 229, 229);
+    --grey-text: rgb(237, 223, 223);
+}
 
 .footer{
     min-height: auto;
-    color: rgb(237, 223, 223);
-    background-color: rgb(82, 80, 80);
+    color: var(--grey-text);
+    background-color: var(--grey-background);
 
     font-size: large;
 }
@@ -13,13 +19,13 @@
 
     margin-bottom: 0.5rem;
     text-align: center;
-    color: white;
+    color: var(--white-color);
 }
 
 .footer__link{
     position: relative;
     text-decoration: none;
-    color: rgb(235, 229, 229);
+    color: var(--grey-color-text);
         
 }
 
@@ -57,7 +63,7 @@
 
 /*Codigo repetitivo fijate que hacer*/
 .footer__p-contact:hover .footer__link, .footer__li-help:hover .footer__link{
-    color: white;
+    color: var(--white-color );
 }
 
 

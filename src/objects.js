@@ -9,94 +9,120 @@ exports.BindingsList = [
         model: "Custom Binding",
         size: ['L'],
         type: "Strap",
-        price: 199
+        price: 199,
+        id: 1001,
+        image: '/images/bindings/custom binding.jpg'
     },
     {
         brand: "Burton",
         model: "Cartel Binding",
         size: ['L', 'M'],
         type: "Strap",
-        price: 269
+        price: 269,
+        id: 1002,
+        image: '/images/bindings/cartel binding.jpg'
     },
     {
         brand: "K2",
-        model: "Vo3 Snowboard Binding",
+        model: "Vo3 Binding",
         size: ['L', 'M'],
         type: "Strap",
-        price: 219
+        price: 219,
+        id: 1003,
+        image: '/images/bindings/k2-vo3.jpg'
     },
     {
         brand: "K2",
-        model: "Formula Snowboard Binding",
+        model: "Formula Binding",
         size: ['L'],
         type: "Strap",
-        price: 169
+        price: 169,
+        id: 1004,
+        image: '/images/bindings/k2-formula.jpg'
     },
     {
         brand: "Union",
-        model: "Atlas Snowboard Binding",
+        model: "Atlas Binding",
         size: ['L', 'M'],
         type: "Strap",
-        price: 229
+        price: 229,
+        id: 1005,
+        image: '/images/bindings/union-atlas.jpg'
     },
     {
         brand: "Union",
-        model: "Strata Snowboard Binding",
+        model: "Strata Binding",
         size: ['L'],
         type: "Strap",
-        price: 199
+        price: 199,
+        id: 1006,
+        image: '/images/bindings/union-strata.jpg'
     },
     {
-        brand: "Burton Step-On Bindings",
-        model: "Step-On Bindings",
+        brand: "Burton",
+        model: "Step-On Binding",
         size: ['L', 'M'],
         type: "Step-In",
-        price: 499.95
+        price: 499,
+        id: 1007,
+        image: '/images/bindings/Burton-Step-On-Bindings.jpg'
     },
     {
-        brand: "Burton Step-On Bindings",
-        model: "Hitchhiker Snowboard Bindings",
+        brand: "Burton Step-On ",
+        model: "Hitchhiker Binding",
         size: ['L', 'M'],
         type: "Step-In",
-        price: 449
+        price: 449,
+        id: 1008,
+        image: '/images/bindings/hitchhiking-stepon.jpg'
     },
     {
         brand: "Ride",
-        model: "Rodeo Snowboard Binding",
+        model: "Rodeo Binding",
         size: ['L'],
         type: "Strap",
-        price: 219
+        price: 219,
+        id: 1009,
+        image: '/images/bindings/ride-rodeo.jpg'
     },
     {
         brand: "Ride",
-        model: "Capo Snowboard Binding",
+        model: "Capo Binding",
         size: ['L'],
         type: "Strap",
-        price: 239
+        price: 239,
+        id: 1010,
+        image: '/images/bindings/ride-capo.jpg'
     },
     {
         brand: "Rossignol",
-        model: "Foil Snowboard Binding",
+        model: "Gala Binding",
         size: ['L', 'M'],
         type: "Strap",
-        price: 209
+        price: 209,
+        id: 1011,
+        image: '/images/bindings/rosi-gala.jpg'
     },
     {
         brand: "Rossignol",
-        model: "District Snowboard Binding",
+        model: "Battle Binding",
         size: ['L', 'M'],
         type: "Strap",
-        price: 189
+        price: 189,
+        id: 1012,
+        image: '/images/bindings/rosi-battle.jpg'
     },
 ];
 exports.snowboardsList = [
     {
         brand: "Burton",
-        model: "Custom Snowboard",
+        model: "Custom X",
         size: ['L'],
         terrain: "All-Mountain",
         personality: "Versatile",
-        price: 500
+        price: 500,
+        id: 2001,
+        image: 'images/snowboards/burton-custom-x-snowboard.jpg'
     },
     {
         brand: "Jones",
@@ -104,7 +130,9 @@ exports.snowboardsList = [
         size: ['L', 'M'],
         terrain: "All-Mountain",
         personality: "Versatile",
-        price: 600
+        price: 600,
+        id: 2002,
+        image: 'images/snowboards/jones-mountain-twin-flip-flop.jpg'
     },
     {
         brand: "Gnu",
@@ -112,15 +140,19 @@ exports.snowboardsList = [
         size: ['L', 'M'],
         terrain: "All-Mountain",
         personality: "Versatile",
-        price: 400
+        price: 400,
+        id: 2003,
+        image: 'images/snowboards/GNU-B-Nice-Womens-Snowboard.jpg'
     },
     {
-        brand: "K2",
-        model: "Remedy Snowboard",
+        brand: "Rosignol",
+        model: "Sashimi",
         size: ['L'],
-        terrain: "All-Mountain",
+        terrain: "Powder",
         personality: "Aggressive",
-        price: 600
+        price: 600,
+        id: 2004,
+        image: 'images/snowboards/sashimi.jpg'
     },
     {
         brand: "Burton",
@@ -128,7 +160,9 @@ exports.snowboardsList = [
         size: ['L'],
         terrain: "All-Mountain",
         personality: "Aggressive",
-        price: 600
+        price: 600,
+        id: 2005,
+        image: 'images/snowboards/burton process.jpg'
     },
     {
         brand: "Arbor",
@@ -136,7 +170,9 @@ exports.snowboardsList = [
         size: ['L', 'M'],
         terrain: "All-Mountain",
         personality: "Versatile",
-        price: 400
+        price: 400,
+        id: 2006,
+        image: 'images/snowboards/arbor foundatinol.jpg'
     },
     {
         brand: "Capita",
@@ -144,15 +180,19 @@ exports.snowboardsList = [
         size: ['L', 'M'],
         terrain: "All-Mountain",
         personality: "Aggressive",
-        price: 600
+        price: 600,
+        id: 2007,
+        image: 'images/snowboards/capita Defenders of Awesome Snowboard.jpg'
     },
     {
-        brand: "Ride",
-        model: "Warpig Snowboard",
+        brand: "Rome",
+        model: "Artifact",
         size: ['L', 'M'],
         terrain: "All-Mountain",
         personality: "Aggressive",
-        price: 500
+        price: 500,
+        id: 2008,
+        image: 'images/snowboards/rome-artifact.jpg'
     },
     {
         brand: "Never Summer",
@@ -160,7 +200,9 @@ exports.snowboardsList = [
         size: ['L'],
         terrain: "All-Mountain",
         personality: "Aggressive",
-        price: 500
+        price: 500,
+        id: 2009,
+        image: 'images/snowboards/never summer proto.jpg'
     },
     {
         brand: "Salomon",
@@ -168,7 +210,9 @@ exports.snowboardsList = [
         size: ['L'],
         terrain: "All-Mountain",
         personality: "Versatile",
-        price: 600
+        price: 600,
+        id: 2010,
+        image: 'images/snowboards/SALOMON-Assassi.jpg'
     }
 ];
 exports.helmetsList = [
@@ -178,7 +222,9 @@ exports.helmetsList = [
         size: "M",
         terrain: "All-Mountain",
         personality: "Adventurous",
-        price: 279
+        price: 279,
+        id: 3001,
+        image: 'images/helmets/vatage mips.jpg'
     },
     {
         brand: "Smith Optics",
@@ -186,7 +232,9 @@ exports.helmetsList = [
         size: "L",
         terrain: "All-Mountain",
         personality: "Sporty",
-        price: 79
+        price: 79,
+        id: 3002,
+        image: 'images/helmets/holt smith.jpg'
     },
     {
         brand: "Giro",
@@ -194,7 +242,9 @@ exports.helmetsList = [
         size: "S",
         terrain: "Park",
         personality: "Cool",
-        price: 89
+        price: 89,
+        id: 3003,
+        image: 'images/helmets/giro ledge.jpg'
     },
     {
         brand: "Giro",
@@ -202,7 +252,9 @@ exports.helmetsList = [
         size: "L",
         terrain: "All-Mountain",
         personality: "Stylish",
-        price: 149
+        price: 149,
+        id: 3004,
+        image: 'images/helmets/giro nine.jpg'
     },
     {
         brand: "Oakley",
@@ -210,7 +262,9 @@ exports.helmetsList = [
         size: "M",
         terrain: "All-Mountain",
         personality: "Innovative",
-        price: 230
+        price: 230,
+        id: 3005,
+        image: 'images/helmets/oakley mod 5.jpg'
     },
     {
         brand: "Oakley",
@@ -218,7 +272,9 @@ exports.helmetsList = [
         size: "L",
         terrain: "All-Mountain",
         personality: "Bold",
-        price: 130
+        price: 130,
+        id: 3006,
+        image: 'images/helmets/oakley mod 3.jpg'
     }
 ];
 exports.BootsList = [
@@ -226,92 +282,98 @@ exports.BootsList = [
         brand: "Atomic",
         model: "Hawx Ultra",
         size: 7.5,
-        price: 599
+        price: 599,
+        id: 4001,
+        image: 'images/boots/atomic.jpg'
     },
     {
         brand: "Atomic",
         model: "Hawx Prime",
         size: 6.5,
-        price: 399
+        price: 399,
+        id: 4002,
+        image: 'image/boots/atomic791.jpg'
     },
     {
         brand: "Rossignol",
-        model: "Alltrack Elite",
+        model: "Excite Lace",
         size: 8.0,
-        price: 699
-    },
-    {
-        brand: "Rossignol",
-        model: "Track 80",
-        size: 7.5,
-        price: 299
-    },
-    {
-        brand: "Lange",
-        model: "RX 120",
-        size: 6.5,
-        price: 599
-    },
-    {
-        brand: "Lange",
-        model: "SX 70",
-        size: 5.5,
-        price: 299
+        price: 699,
+        id: 4003,
+        image: 'images/boots/rossignol-excite-lace-snowboard-boots.jpg'
     },
     {
         brand: "Salomon",
-        model: "S/Pro 120",
+        model: "Dialogue 2023",
+        size: 7.5,
+        price: 299,
+        id: 4004,
+        image: 'images/boots/salomon-dialogue.jpg'
+    },
+    {
+        brand: "Salomon",
+        model: "Faction Boa",
         size: 7.0,
-        price: 699
+        price: 699,
+        id: 4007,
+        image: 'images/boots/salomon-dialogue.jpg'
     },
     {
-        brand: "Salomon",
-        model: "QST Access Custom Heat",
+        brand: "DC",
+        model: "Lace Pro",
         size: 8.5,
-        price: 599
+        price: 599,
+        id: 4008,
+        image: 'images/boots/dc shows.jpg'
     },
     {
-        brand: "Nordica",
-        model: "Speedmachine 130",
+        brand: "DC",
+        model: "Control Boa",
         size: 11,
-        price: 699
+        price: 699,
+        id: 4009,
+        image: 'images/boots/dc-control boa.jpg'
     },
     {
-        brand: "Nordica",
-        model: "Cruise 60",
+        brand: "Ride",
+        model: "Rook",
         size: 10,
-        price: 249
+        price: 249,
+        id: 4010,
+        image: 'images/boots/dc-control boa.jpg'
     },
     {
-        brand: "Tecnica",
-        model: "Cochise 120",
+        brand: "Burton",
+        model: "Photon step-on",
         size: 7.5,
-        price: 599
+        price: 599,
+        id: 4011,
+        image: 'images/boots/burton-photon-step-on.jpg'
     },
-    {
-        brand: "Tecnica",
-        model: "Mach Sport HV 85",
-        size: 6.5,
-        price: 450
-    }
 ];
 exports.GogglesList = [
     {
         brand: "Oakley",
         model: "Flight Deck",
         reflective: true,
-        price: 200
+        price: 200,
+        id: 5001,
+        image: 'images/goggles/flight deck.jpg'
     },
     {
         brand: "Smith",
         model: "I/O Mag",
         reflective: true,
-        price: 240
+        price: 240,
+        id: 5002,
+        image: 'images/goggles/smith.jpg'
     },
     {
         brand: "Giro",
         model: "Contact",
         reflective: false,
-        price: 150
+        price: 150,
+        id: 5003,
+        image: 'images/goggles/giro-contact.jpg'
     }
 ];

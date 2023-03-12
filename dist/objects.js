@@ -1,4 +1,4 @@
-export var BindingsList = [
+export const BindingsList = [
     {
         brand: "Burton",
         model: "Custom Binding",
@@ -108,15 +108,16 @@ export var BindingsList = [
         image: '/images/bindings/rosi-battle.jpg',
     },
 ];
-export var snowboardsList = [
+export const snowboardsList = [
     {
         brand: "Burton",
-        model: "Custom Snowboard",
+        model: "Custom X",
         size: ['L'],
         terrain: "All-Mountain",
         personality: "Versatile",
         price: 500,
-        id: 2001
+        id: 2001,
+        image: '/images/snowboards/burton-custom-x-snowboard.jpg',
     },
     {
         brand: "Jones",
@@ -125,7 +126,8 @@ export var snowboardsList = [
         terrain: "All-Mountain",
         personality: "Versatile",
         price: 600,
-        id: 2002
+        id: 2002,
+        image: '/images/snowboards/jones-mountain-twin-flip-flop.jpg',
     },
     {
         brand: "Gnu",
@@ -134,16 +136,18 @@ export var snowboardsList = [
         terrain: "All-Mountain",
         personality: "Versatile",
         price: 400,
-        id: 2003
+        id: 2003,
+        image: '/images/snowboards/GNU-B-Nice-Womens-Snowboard.jpg',
     },
     {
-        brand: "K2",
-        model: "Remedy Snowboard",
+        brand: "Rosignol",
+        model: "Sashimi",
         size: ['L'],
-        terrain: "All-Mountain",
+        terrain: "Powder",
         personality: "Aggressive",
         price: 600,
-        id: 2004
+        id: 2004,
+        image: '/images/snowboards/sashimi.jpg',
     },
     {
         brand: "Burton",
@@ -152,7 +156,8 @@ export var snowboardsList = [
         terrain: "All-Mountain",
         personality: "Aggressive",
         price: 600,
-        id: 2005
+        id: 2005,
+        image: '/images/snowboards/burton process.jpg',
     },
     {
         brand: "Arbor",
@@ -161,7 +166,8 @@ export var snowboardsList = [
         terrain: "All-Mountain",
         personality: "Versatile",
         price: 400,
-        id: 2006
+        id: 2006,
+        image: '/images/snowboards/arbor foundatinol.jpg',
     },
     {
         brand: "Capita",
@@ -170,16 +176,18 @@ export var snowboardsList = [
         terrain: "All-Mountain",
         personality: "Aggressive",
         price: 600,
-        id: 2007
+        id: 2007,
+        image: '/images/snowboards/capita Defenders of Awesome Snowboard.jpg',
     },
     {
-        brand: "Ride",
-        model: "Warpig Snowboard",
+        brand: "Rome",
+        model: "Artifact",
         size: ['L', 'M'],
         terrain: "All-Mountain",
         personality: "Aggressive",
         price: 500,
-        id: 2008
+        id: 2008,
+        image: '/images/snowboards/rome-artifact.jpg',
     },
     {
         brand: "Never Summer",
@@ -188,7 +196,8 @@ export var snowboardsList = [
         terrain: "All-Mountain",
         personality: "Aggressive",
         price: 500,
-        id: 2009
+        id: 2009,
+        image: '/images/snowboards/never summer proto.jpg',
     },
     {
         brand: "Salomon",
@@ -197,10 +206,11 @@ export var snowboardsList = [
         terrain: "All-Mountain",
         personality: "Versatile",
         price: 600,
-        id: 2010
+        id: 2010,
+        image: '/images/snowboards/SALOMON-Assassi.jpg',
     }
 ];
-export var helmetsList = [
+export const helmetsList = [
     {
         brand: "Smith Optics",
         model: "Vantage MIPS",
@@ -208,7 +218,8 @@ export var helmetsList = [
         terrain: "All-Mountain",
         personality: "Adventurous",
         price: 279,
-        id: 3001
+        id: 3001,
+        image: '/images/helmets/vatage mips.jpg',
     },
     {
         brand: "Smith Optics",
@@ -217,7 +228,8 @@ export var helmetsList = [
         terrain: "All-Mountain",
         personality: "Sporty",
         price: 79,
-        id: 3002
+        id: 3002,
+        image: '/images/helmets/holt smith.jpg',
     },
     {
         brand: "Giro",
@@ -226,7 +238,8 @@ export var helmetsList = [
         terrain: "Park",
         personality: "Cool",
         price: 89,
-        id: 3003
+        id: 3003,
+        image: '/images/helmets/giro ledge.jpg',
     },
     {
         brand: "Giro",
@@ -235,7 +248,8 @@ export var helmetsList = [
         terrain: "All-Mountain",
         personality: "Stylish",
         price: 149,
-        id: 3004
+        id: 3004,
+        image: '/images/helmets/giro nine.jpg',
     },
     {
         brand: "Oakley",
@@ -244,7 +258,8 @@ export var helmetsList = [
         terrain: "All-Mountain",
         personality: "Innovative",
         price: 230,
-        id: 3005
+        id: 3005,
+        image: '/images/helmets/oakley mod 5.jpg',
     },
     {
         brand: "Oakley",
@@ -253,116 +268,108 @@ export var helmetsList = [
         terrain: "All-Mountain",
         personality: "Bold",
         price: 130,
-        id: 3006
+        id: 3006,
+        image: '/images/helmets/oakley mod 3.jpg',
     }
 ];
-export var BootsList = [
+export const BootsList = [
     {
         brand: "Atomic",
         model: "Hawx Ultra",
         size: 7.5,
         price: 599,
-        id: 4001
+        id: 4001,
+        image: '/images/boots/atomic.jpg',
     },
     {
         brand: "Atomic",
         model: "Hawx Prime",
         size: 6.5,
         price: 399,
-        id: 4002
+        id: 4002,
+        image: '/images/boots/atomic791.jpg',
     },
     {
         brand: "Rossignol",
-        model: "Alltrack Elite",
+        model: "Excite Lace",
         size: 8.0,
         price: 699,
-        id: 4003
-    },
-    {
-        brand: "Rossignol",
-        model: "Track 80",
-        size: 7.5,
-        price: 299,
-        id: 4004
-    },
-    {
-        brand: "Lange",
-        model: "RX 120",
-        size: 6.5,
-        price: 599,
-        id: 4005
-    },
-    {
-        brand: "Lange",
-        model: "SX 70",
-        size: 5.5,
-        price: 299,
-        id: 4006
+        id: 4003,
+        image: '/images/boots/rossignol-excite-lace-snowboard-boots.jpg',
     },
     {
         brand: "Salomon",
-        model: "S/Pro 120",
+        model: "Dialogue 2023",
+        size: 7.5,
+        price: 299,
+        id: 4004,
+        image: '/images/boots/salomon-dialogue.jpg',
+    },
+    {
+        brand: "Salomon",
+        model: "Faction Boa",
         size: 7.0,
         price: 699,
-        id: 4007
+        id: 4007,
+        image: '/images/boots/salomon-dialogue.jpg',
     },
     {
-        brand: "Salomon",
-        model: "QST Access Custom Heat",
+        brand: "DC",
+        model: "Lace Pro",
         size: 8.5,
         price: 599,
-        id: 4008
+        id: 4008,
+        image: '/images/boots/dc shows.jpg',
     },
     {
-        brand: "Nordica",
-        model: "Speedmachine 130",
+        brand: "DC",
+        model: "Control Boa",
         size: 11,
         price: 699,
-        id: 4009
+        id: 4009,
+        image: '/images/boots/dc-control boa.jpg',
     },
     {
-        brand: "Nordica",
-        model: "Cruise 60",
+        brand: "Ride",
+        model: "Rook",
         size: 10,
         price: 249,
-        id: 4010
+        id: 4010,
+        image: '/images/boots/dc-control boa.jpg',
     },
     {
-        brand: "Tecnica",
-        model: "Cochise 120",
+        brand: "Burton",
+        model: "Photon step-on",
         size: 7.5,
         price: 599,
-        id: 4011
+        id: 4011,
+        image: '/images/boots/burton-photon-step-on.jpg',
     },
-    {
-        brand: "Tecnica",
-        model: "Mach Sport HV 85",
-        size: 6.5,
-        price: 450,
-        id: 4012
-    }
 ];
-export var GogglesList = [
+export const GogglesList = [
     {
         brand: "Oakley",
         model: "Flight Deck",
         reflective: true,
         price: 200,
-        id: 5001
+        id: 5001,
+        image: '/images/goggles/flight deck.jpg',
     },
     {
         brand: "Smith",
         model: "I/O Mag",
         reflective: true,
         price: 240,
-        id: 5002
+        id: 5002,
+        image: '/images/goggles/smith.jpg',
     },
     {
         brand: "Giro",
         model: "Contact",
         reflective: false,
         price: 150,
-        id: 5003
+        id: 5003,
+        image: '/images/goggles/giro-contact.jpg',
     }
 ];
 //# sourceMappingURL=objects.js.map

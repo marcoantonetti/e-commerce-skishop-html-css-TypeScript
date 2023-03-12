@@ -1,20 +1,31 @@
-import { BindingsList } from "./objects.js";
-var containerGrid = document.querySelector('.main__product-container-grid');
-var populateGrid = function (gallery) {
-    gallery.forEach(function (product) {
+import { snowboardsList, BindingsList, helmetsList, BootsList, GogglesList } from "./objects.js";
+const containerGrid = document.querySelector('.main__product-container-grid');
+const populateGrid = (gallery) => {
+    gallery.forEach((product) => {
         createProductLayout(product);
     });
 };
-populateGrid(BindingsList);
+const getURLandPopuplate = (url) => {
+    let regexList = [/snowboards.html$/, /bindings.html$/, /helmets.html$/, /boots.html$/, /goggles.html$/];
+    let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList];
+    regexList.forEach((regex, index) => {
+        if (regex.test(url)) {
+            populateGrid(productList[index]);
+        }
+    });
+};
+getURLandPopuplate(window.location.href);
+console.log(/bindings.html$/.test(window.location.href));
+console.log(window.location.href);
 function createProductLayout(product) {
-    var flexContainer = document.createElement('div');
-    var image = document.createElement('img');
-    var title = document.createElement('h3');
-    var subtitle = document.createElement('h3');
-    var price = document.createElement('p');
-    var overlay = document.createElement('div');
-    var shopCart = document.createElement('a');
-    var detail = document.createElement('a');
+    const flexContainer = document.createElement('div');
+    const image = document.createElement('img');
+    const title = document.createElement('h3');
+    const subtitle = document.createElement('h3');
+    const price = document.createElement('p');
+    const overlay = document.createElement('div');
+    const shopCart = document.createElement('a');
+    const detail = document.createElement('a');
     flexContainer.className = 'main__product-item-grid main__product-flex-container';
     image.className = 'main__flex-child-img';
     title.className = 'main__flex-child-title';
@@ -39,10 +50,16 @@ function createProductLayout(product) {
     overlay.appendChild(shopCart);
     overlay.appendChild(detail);
 }
-var hamburguerButton = document.querySelector('.header__hamburguer-button');
-var navBar = document.querySelector('.header__nav-bar-ul-left');
-hamburguerButton === null || hamburguerButton === void 0 ? void 0 : hamburguerButton.addEventListener('click', function (e) {
+const hamburguerButton = document.querySelector('.header__hamburguer-button');
+const navBar = document.querySelector('.header__nav-bar-ul-left');
+hamburguerButton === null || hamburguerButton === void 0 ? void 0 : hamburguerButton.addEventListener('click', (e) => {
     e.preventDefault();
     navBar === null || navBar === void 0 ? void 0 : navBar.classList.toggle('active');
+    hamburguerButton.classList.toggle('active');
+});
+const searchBar = document.querySelector('.header__search-bar-toggle');
+const glassLogo = document.querySelector('.fa-magnifying-glass');
+glassLogo === null || glassLogo === void 0 ? void 0 : glassLogo.addEventListener('click', () => {
+    searchBar === null || searchBar === void 0 ? void 0 : searchBar.classList.toggle('active');
 });
 //# sourceMappingURL=index.js.map

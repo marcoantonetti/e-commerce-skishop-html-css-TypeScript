@@ -4,8 +4,10 @@ import { snowboardsList, BindingsList, helmetsList, BootsList, GogglesList } fro
 
 const containerGrid = document.querySelector<HTMLDivElement>('.main__product-container-grid')
 
-// This function populates the grid gallery with multiple products layouts
-const populateGrid = (gallery: Binding[]) =>{
+
+
+// This function populates the grid gallery with multiple products layouts (grid items)
+const populateGrid = (gallery: Binding[] | Snowboard[] | Goggle[] | Boot[] | Helmet[] ) =>{
     
     gallery.forEach((product) => {
         
@@ -14,27 +16,52 @@ const populateGrid = (gallery: Binding[]) =>{
     })
 }
 
-populateGrid(BindingsList)
+
+// This takes the current url as a parameter and calls the populateGrid function based on said url.
+const getURLandPopuplate = (url) => {
+
+    // Regex read: url ending with the following regex
+    let regexList = [/snowboards.html$/,/bindings.html$/, /helmets.html$/, /boots.html$/,/goggles.html$/] 
+
+    let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList]
+
+    regexList.forEach((regex, index) => {
+
+        if(regex.test(url)){         // If the current url ends with one of the regex.
+
+            
+            populateGrid(productList[index])
+
+        }
 
 
-// This function created an HTML structure such as this one. Which can be seen in the html file
+    })
 
-/*<div class="main__product-item-grid main__product-flex-container">
-                
-            <img class='main__flex-child-img' src="/images/bindings/union-force (1).jpg" alt="binding"></img>
-            <h3 class='main__flex-child-title'>Union Binding</h3>
-            <p class="main__flex-child-price">$600</p>
+}// window.location.href returns a string of the current url
+getURLandPopuplate(window.location.href)
+
+console.log(/bindings.html$/.test(window.location.href))
+console.log(window.location.href)
 
 
-            <div class="main__overlay">
-                <a href='#' style="--i: 1;" class="fa-solid fa-cart-plus"></a>
-                <a href='#' style="--i: 2;" class="fa-solid fa-magnifying-glass"></a>
-            </div>
 
-</div>*/
-
-function createProductLayout  (product: Binding) {
-
+// This function creates an HTML structure such as this one. This will be the product layout of the grid items.
+function createProductLayout  (product: Binding | Snowboard | Helmet | Goggle | Boot) {
+    
+    /*<div class="main__product-item-grid main__product-flex-container">
+                    
+                <img class='main__flex-child-img' src="/images/bindings/union-force (1).jpg" alt="binding"></img>
+                <h3 class='main__flex-child-title'>Union Binding</h3>
+                <p class="main__flex-child-price">$600</p>
+    
+    
+                <div class="main__overlay">
+                    <a href='#' style="--i: 1;" class="fa-solid fa-cart-plus"></a>
+                    <a href='#' style="--i: 2;" class="fa-solid fa-magnifying-glass"></a>
+                </div>
+    
+    </div>*/
+    
     // Elements creation
     const flexContainer:HTMLDivElement       = document.createElement('div')
     const image:        HTMLImageElement     = document.createElement('img')
@@ -91,10 +118,22 @@ hamburguerButton?.addEventListener('click', (e) => {
     e.preventDefault()
 
     navBar?.classList.toggle('active')
+    hamburguerButton.classList.toggle('active')
 
 
 })
 
+
+// Code for search glass icon event. When clicked it toggles a search bar
+
+const searchBar = document.querySelector<HTMLInputElement>('.header__search-bar-toggle');
+const glassLogo = document.querySelector<HTMLLIElement>('.fa-magnifying-glass');
+
+glassLogo?.addEventListener('click', () => {
+
+    searchBar?.classList.toggle('active')
+
+})
 
 
 
