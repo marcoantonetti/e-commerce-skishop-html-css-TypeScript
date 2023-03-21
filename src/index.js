@@ -87,3 +87,5 @@ glassLogo === null || glassLogo === void 0 ? void 0 : glassLogo.addEventListener
     searchBar === null || searchBar === void 0 ? void 0 : searchBar.classList.toggle('active');
     console.log('sd');
 });
+
+

@@ -3,6 +3,7 @@ const containerGrid = document.querySelector('.main__product-container-grid');
 const populateGrid = (gallery) => {
     gallery.forEach((product) => {
         createProductLayout(product);
+        console.log('asd');
     });
 };
 const getURLandPopuplate = (url) => {
@@ -15,8 +16,6 @@ const getURLandPopuplate = (url) => {
     });
 };
 getURLandPopuplate(window.location.href);
-console.log(/bindings.html$/.test(window.location.href));
-console.log(window.location.href);
 function createProductLayout(product) {
     const flexContainer = document.createElement('div');
     const image = document.createElement('img');
@@ -60,6 +59,7 @@ hamburguerButton === null || hamburguerButton === void 0 ? void 0 : hamburguerBu
 const searchBar = document.querySelector('.header__search-bar-toggle');
 const glassLogo = document.querySelector('.fa-magnifying-glass');
 glassLogo === null || glassLogo === void 0 ? void 0 : glassLogo.addEventListener('click', () => {
+    console.log('as');
     searchBar === null || searchBar === void 0 ? void 0 : searchBar.classList.toggle('active');
 });
 //# sourceMappingURL=index.js.map

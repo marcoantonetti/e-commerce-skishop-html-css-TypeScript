@@ -134,7 +134,7 @@ const searchBar = document.querySelector<HTMLInputElement>('.header__search-bar-
 const glassLogo = document.querySelector<HTMLLIElement>('.fa-magnifying-glass');
 
 glassLogo?.addEventListener('click', () => {
-
+    console.log('as')
     searchBar?.classList.toggle('active')
 
 })
