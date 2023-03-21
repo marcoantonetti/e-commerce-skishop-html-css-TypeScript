@@ -9,10 +9,7 @@ main {
 .main__header-flex-container {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 1.5rem;
 }
-
-.main__h2 {}
 
 .main__filter-dropdown {
     margin-right: 15rem;
@@ -40,6 +37,7 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) 12rem;
     gap: 2rem;
     margin-bottom: 5rem;
+    margin-left: 1.5rem;
 }
 
 
@@ -49,7 +47,7 @@ main {
     grid-row: 1/-4;
     grid-column-end: -1;
 
-    background: url('/images/ads/vertical-ad.jpg ');
+    background: url('../images/ads/vertical-ad.jpg ');
 
     background-size: 100% 25rem;
     background-repeat: repeat;
@@ -62,7 +60,7 @@ main {
 }
 
 .main__aside-horizontal-ad {
-    background-image: url("/images/ads/vertical-ad3.jpg");
+    background-image: url("../images/ads/vertical-ad3.jpg");
 
     padding: 4rem;
 

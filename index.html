@@ -8,32 +8,43 @@
     <title>Document</title>
 
     <link rel="stylesheet" href="css/header.css"> 
-    <link rel="stylesheet" href="css/product-landing.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/newsletter.css">
+
+    <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/a494238601.js" crossorigin="anonymous"></script>
 
 
 </head>
 
 <body>
-
     <header>
 
-        <h1 class="header__h1"><a class="header__link" href="index.html">SNOWDEVIL.</a></h1>
-
+        <h1 class="header__h1"><a class="header__link" href="../index.html">SNOWDEVIL.</a></h1>
+        
         <nav class="header__nav-bar">
-            <ul class ='header__nav-bar-ul' id="header__left-nav-bar-ul">
 
-                <li class="header__nav-bar-li"><a class="header__link" href="html/snowboards.html">Snowboards</a></li>
-                <li class="header__nav-bar-li"><a class="header__link" href="html/bindings.html">Bindings</a></li>
-                <li class="header__nav-bar-li"><a class="header__link" href="html/boots.html">Boots</a></li>
-                <li class="header__nav-bar-li"><a class="header__link" href="html/helmets.html">Helmets</a></li>
-                <li class="header__nav-bar-li"><a class="header__link" href="html/goggles.html">Goggles</a></li>
+            <a href="#" class="header__hamburguer-button">
+                <span class="header__hamburguer-bar"></span>
+                <span class="header__hamburguer-bar"></span>
+                <span class="header__hamburguer-bar"></span>
+            </a>
+           
+            <ul class ='header__nav-bar-ul-left' role="navbar-items">
+                
+                <li class="header__nav-bar-li"><a class="header__link" href="/html/snowboards.html">Snowboards</a></li>
+                <li class="header__nav-bar-li"><a class="header__link" href="/html/bindings.html">Bindings</a></li>
+                <li class="header__nav-bar-li"><a class="header__link" href="/html/boots.html">Boots</a></li>
+                <li class="header__nav-bar-li"><a class="header__link" href="/html/helmets.html">Helmets</a></li>
+                <li class="header__nav-bar-li"><a class="header__link" href="/html/goggles.html">Goggles</a></li>
             </ul>
+            <input type="text" placeholder="Search items" class="header__search-bar-toggle">
 
-            <ul class ='header__nav-bar-ul' id='header__right-nav-bar-ul'>
+            <ul class ='header__nav-bar-ul-right'  role="navbar-items">
 
-                <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i class="fa-solid fa-magnifying-glass"></i></a></li>
-                <li class="header__nav-bar-li"><a class="header__link" href="store-info.html"><i class="fa-solid fa-location-dot"></i></a></li>
+                <li class="header__nav-bar-li header__link"><i class="fa-solid fa-magnifying-glass"></i></li>
+                <li class="header__nav-bar-li"><a class="header__link" href="/html/store-info.html"><i class="fa-solid fa-location-dot"></i></a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i class="fa-solid fa-cart-shopping"></i></a></li>
                 <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i class="fa-solid fa-user"></i></a></li>
                 
@@ -41,21 +52,172 @@
         </nav>
     </header>
 
+
     <main>
-        <h2>Productos destacados</h2>
-        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem velit suscipit porro eum atque beatae. A exercitationem vitae voluptate nihil atque ea consectetur officia eos ut mollitia. Nostrum porro recusandae, eveniet beatae incidunt vero ut cupiditate, corrupti nemo perspiciatis velit quis minima iure dolor exercitationem ipsa itaque placeat? Doloremque, temporibus?</p>
-        <!--Por ahora solo divs vacios, esta semana se completara-->
-        <div id="slide-feature-products"></div>
-        <div id="grid-all-products"></div>
+        <section class="main__section-slider">
+
+            
+            <div class="main__div-bubble-container">
+            
+                
+                <div class="main__img-bubble"></div>
+                <p class="main__p-phrase"> Browse the shop,  </p>
+                <p class="main__p-phrase"> &emsp;&emsp; shred the snow !</p>
+                <img src="images/best.jpg" class="main__img-awardlogo">
+                
+            
+
+        </div>
+
+        <figure class="main__figure-slider" role="slider">
+            <img class='main__img-slide' src="images/main-cover/wallpapers/main3.jpg" alt="">
+            <img class='main__img-slide' src="images/main-cover/wallpapers/main5.jpg" alt="">
+            <img class='main__img-slide' src="images/main-cover/wallpapers/main4.jpg" alt="">
+            <img class='main__img-slide' src="images/main-cover/wallpapers/main.jpg" alt="">
+            <img class='main__img-slide' src="images/main-cover/wallpapers/main3.jpg" alt="">
+
+        </figure>
+
+        </section>
+
+        <section role="store-info">
+
+            <h2 class="main__h2"> Snowdevil </h2>
+            <hr>
+
+            <p class="main__p-info"> As a four time winner of "The Best Seller" awards we continue to push forward the best
+                boutique snowboard shop in Colorado. All of our clients know us for providing the best
+                selected products to make your snow shredding as best as humanly possible. Now we launch our new
+                e-commerce website so that every snowboarder out there can be a Snowdevil.
+            </p>
+
+        </section>
+
+        <section class="main__section-gallery" role="gallery">
+
+            <h2 class="main__h2"> Snowdevil's featured products </h2>
+              <hr>  
+                <div class="main__div-gallery">
+
+                <img class='main__img-gallery' src="/images/main-cover/main1.jpg">
+                <img class='main__img-gallery' src="/images/main-cover/main2.jpg">
+                <img class='main__img-gallery' src="/images/main-cover/main3.jpg">
+                <img class='main__img-gallery' src="/images/main-cover/main4.jpg">
+                <img class='main__img-gallery' src="/images/main-cover/main5.jpg">
+
+            </div>
+
+
+            
+            <section class="main__section-newsletter-grid-item" role="newsletter">
+
+                <h2 class="main__section-h2"> Newsletter </h2>
+                <div class="main__div-newsletter-flex-col">
+                    <h3 class="main__section-h3"> Suscribe to our newsletter. Deals,<br> &emsp; coaching videos and
+                        much more!</h3>
+
+                    <form class="main__form-flex-col">
+                        <input class='form__input-big' type="text" placeholder="name" id="name-newsletter" name="name-newsletter">
+                        <label for="name-newsletter" class="form__label"></label>
+
+                        <input class='form__input-big' type="email" placeholder="name" id="email-newsletter" name="email-newsletter">
+                        <label for="email-newsletter" class="form__label"></label>
+                        <div class="form__input-container-flex-row">
+                            <div class="form__label-input-flex-col">
+
+                                <label class="form__label" for="birthdate">Birthdate</label>
+                                <input class='form__input-big' required type="date" id="birthdate" name="birthdate" max="2002-12-31">
+
+                            </div>
+                            <div class="form__label-input-flex-col">
+
+                                <label class="form__label" for="gender">Gender</label>
+                                <select class='form__input-big' id="gender" name="gender">
+                                    <option label='Male' value="Male"></option>
+                                    <option value="Female">Female</option>
+                                    <option label='Other' value="Other"></option>
+                                </select>
+                            </div>
+
+                        </div>
+                    <input type="submit" class="form__submit">
+                    </form>
+                </div>
+
+            </section>
+
+        </section>
+
     </main>
 
-    <footer>
+    <footer class="footer">
 
-        <!--
-            Luego pondre contacto y ubicacion aqui
-        -->
+        <div class="footer__flex-container">
+
+            <div class="footer__div-help-contact">
+
+                <div class="footer__div-help">
+                    <h4 class="footer__h4">Help</h4>
+                    <ul class="footer__ul-help">
+                        <li class="footer__li-help"><a id="snowboards" class="footer__link" href="/html/store-info.html">Order Status</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="/html/store-info.html">Delivery</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="/html/store-info.html">Returns</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="/html/store-info.html">Payments</a></li>
+                        <li class="footer__li-help"><a class="footer__link" href="/html/store-info.html">Warranty</a></li>
+                    </ul>
+
+                </div>
+
+                <div class="footer__div-contact">
+
+                    <h4 class="footer__h4">Contact</h4>
+                    <p class="footer__p-contact"><a class="footer__link" href="/html/store-info.html">Contact Us</a></p>
+
+                </div>
+
+            </div>
+
+            <div class="footer__div-social-links">
+
+                <h4 class="footer__h4">Follow us on our social media!</h5>
+                    <ul class="footer__ul-social_links">
+                        <li class="footer__li-social_links"> <a class="footer__link" href="#"
+                                style="--hover-color: rgb(0, 21, 248);"> <i
+                                    class="fa fa-facebook footer__i-social-logo" aria-hidden="true"></i>
+                                Facebook</a></li>
+                        <li class="footer__li-social_links"> <a class="footer__link" href="#"
+                                style="--hover-color: rgb(8, 153, 210);"> <i
+                                    class="fa fa-twitter footer__i-social-logo" aria-hidden="true"></i> Twitter</a>
+                        </li>
+                        <li class="footer__li-social_links"> <a class="footer__link" href="#"
+                                style="--hover-color: rgb(162, 42, 186);"> <i
+                                    class="fa fa-instagram footer__i-social-logo" aria-hidden="true"></i>
+                                Instagram</a></li>
+                        <li class="footer__li-social_links"> <a class="footer__link" href="#"
+                                style="--hover-color: rgb(49, 60, 187);"> <i
+                                    class="fa fa-linkedin footer__i-social-logo" aria-hidden="true"></i>
+                                Linkedin</a></li>
+                    </ul>
+
+            </div>
+
+
+            <div class="footer__div-location">
+                <h4 class="footer__h4"> Location </h4>
+
+                <iframe class='footer__iframe'
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1739.215208651252!2d-105.97156502204766!3d39.606372219954245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x876a51468ce83f23%3A0xcca362053e21015f!2sKeystone%20Adventure%20Center!5e0!3m2!1ses!2sar!4v1677875898642!5m2!1ses!2sar"
+                    width="350" height="250" style="border:0; border-radius: 1rem;" allowfullscreen=""
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+        </div>
+
+        <p class="footer__rights-reserved"> @ All rights reserved</p>
+
 
     </footer>
+
 
 
 

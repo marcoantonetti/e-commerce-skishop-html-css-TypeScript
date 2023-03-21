@@ -1,0 +1,317 @@
+* {
+    box-sizing: border-box;
+
+    --background-color: rgb(26, 24, 24);
+
+
+    margin: 0;
+    padding: 0;
+
+    --grey-background: rgb(82, 80, 80);
+    --white-color: rgb(255, 255, 255);
+    --lightgrey-color-text: rgb(235, 229, 229);
+    --grey-text: rgb(237, 223, 223);
+    --lightgrey-bg: rgba(128, 128, 128, 0.251);
+    --lightgrey-bg-lighter: rgba(128, 128, 128, 0.151)
+    --lightgrey-bg-darker: rgba(128, 128, 128, 0.211);
+
+    --font-gothic: Aclonica , sans-serif;
+
+
+
+}
+
+body {
+    /* background: linear-gradient(to right, rgb(57, 140, 234), rgb(193, 221, 242)  , rgb(171, 202, 238)); */
+    background: linear-gradient(to right, rgb(57, 140, 234), rgb(141, 190, 230), rgb(190, 208, 227));
+    font-size: 1rem;
+    width: 100vw;
+    
+    overflow-x: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-stretch: wider;
+
+
+
+
+}
+
+/* Style for every <hr> in the site */
+hr{
+    width: 60%;
+    height: 0.2rem;
+    background-color: black;
+    color: black;
+    border: none;
+    margin: 0.3rem 0rem 2rem 1.5rem;
+
+}
+
+/* Style for most <h2> in the site */
+
+.main__h2{
+
+    margin: 0rem 2rem 0rem 1.5rem;
+    font-family: var(--font-gothic);
+    font-weight: 400;
+    font-size: 2.3rem;
+
+}
+
+
+
+
+
+/* Style for index.html (main page) */
+
+/*Style for the wallpaper slider*/
+.main__section-slider{
+
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 2rem;
+
+}
+
+.main__figure-slider {
+    position: relative;
+    z-index: 0;
+
+    left: 0;
+    width: 500%; /*So that the 5 images are next to each other, each covering 100% */
+    height: 50rem;
+    animation: 20s slider infinite; /*Moves 100% (next image) the 500% figure after some seconds*/
+}
+
+.main__img-slide{
+
+    width: 20%;
+    float: left;
+    max-height: 100%;
+
+    object-fit: cover;
+
+
+}
+
+.main__img-slide:nth-child(4){
+    transform: scaleX(-100%);
+}
+
+
+
+/* Style for the bubble on the image sliders */
+.main__div-bubble-container{
+
+    position: absolute;
+    z-index: 1;
+    top: 3.5rem;
+    left: 2rem;
+
+    height: 14rem;
+    width: 23rem;
+    padding: 2rem 1rem 1rem 1rem;
+
+    text-align: center;
+    /* background-color: var(--lightgrey-bg);
+    border-radius: 1rem; */   
+ 
+
+
+}
+
+.main__img-bubble{
+
+    position: absolute;
+
+    background-image: url(/images/bubble.png) ;
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+
+    height: 28rem;
+    width: 28rem;
+
+    left: -1rem;
+    top: -2rem;
+
+    z-index: 0;
+    
+}
+
+.main__img-awardlogo{
+
+    position: relative;
+    border-radius: 50%;
+    height: 5rem;
+    padding-left: 3rem;
+
+    z-index: 1;
+
+
+
+}
+
+.main__p-phrase{
+    /* shred the snow phrase */
+    position: relative;
+    left: 1.8rem;
+    margin: 0.3rem 0rem;
+
+    color: rgb(195, 43, 43);
+
+    font-size: 1.2rem;
+    font-weight: 800;
+    font-family: Aclonica , sans-serif;
+
+
+}
+
+.main__p-phrase:first-child{
+    margin-top: 0.7rem;
+}
+
+/* Style for snowdevil section text */
+
+
+.main__p-info{
+
+    padding: 0rem 15rem 0rem 0rem;
+    margin: 3rem 0rem 4rem 1.5rem;
+
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 550;
+    color: rgb(41, 36, 36);
+
+}
+
+/* Style for image gallery */
+
+/* h2 */
+
+
+.main__div-gallery{
+
+    display: flex;
+    justify-content: center;
+    height: 30rem;
+    width: 50rem;
+
+    
+    margin: auto;
+    margin-bottom: 2rem ;
+
+}
+
+.main__img-gallery{
+
+    width: 0rem;
+    flex-grow: 1;
+
+    object-fit: cover;
+
+    opacity: 0.8;
+    transition: .5s ease;
+
+}
+
+.main__img-gallery:hover{
+
+    cursor: crosshair;
+    width: 30rem;
+    filter: contrast(120%);
+    opacity: 1;
+
+    
+
+}
+
+/* Animations */
+/* Since figure has 5 images, its set to a 500% width. It will transition to the next
+100% (next image) after some seconds. Overflow-x is hidden. */
+@keyframes slider {
+    0%{
+
+        left:0
+
+    }
+
+    20%{
+
+        left: 0%
+
+    }
+
+    25%{
+
+        left: -100%
+
+    }
+
+    45%{
+
+        left: -100%
+
+    }
+
+    50%{
+
+        left: -200%
+
+    }
+
+    70%{
+
+        left: -200%
+
+    }
+
+    75%{
+
+        left: -300%
+
+    }
+
+    95%{
+
+        left: -300%
+
+    }
+
+    100%{
+
+        left: -400%
+
+    }
+
+}
+
+/* Media queries */
+
+@media(max-width: 1180px){
+    
+    .main__figure-slider{
+        height: auto;
+    }
+    
+    .main__p-info{
+        padding: 0rem 0.5rem;
+        margin: 1rem 0rem 3rem 0rem;
+    }
+}
+
+@media(max-width:900px){
+    .main__div-bubble-container{
+        display: none;
+
+    }
+
+    .main__div-gallery{
+
+        width: auto;
+        padding: 0rem 1rem;
+
+    }
+
+}

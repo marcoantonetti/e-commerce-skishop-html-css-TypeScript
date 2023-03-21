@@ -1,18 +1,1 @@
-voy a hacer todo grid. En vez de poner un height en el header lo cambio como la altura de la primera fila del grid
-puedo hacer fr en el nav bar en vez de gap y justify content
-
-fixed positining al nav bar
-
-index.html:
-header
-nav
-background image // opcional
-image slider 
-newsletter
-footer
-
-added BEM to my proyect
-side bar para carrito, bootstrap side bar example para inspiracion
-
-corroborar nombres
-hacer lo mismo para otro productos
+hola santi

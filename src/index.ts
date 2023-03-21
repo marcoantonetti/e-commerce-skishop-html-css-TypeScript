@@ -10,48 +10,46 @@ const containerGrid = document.querySelector<HTMLDivElement>('.main__product-con
 const populateGrid = (gallery: Binding[] | Snowboard[] | Goggle[] | Boot[] | Helmet[] ) =>{
     
     gallery.forEach((product) => {
-        
         createProductLayout(product)
+
+        console.log('asd')
         
     })
 }
 
 
 // This takes the current url as a parameter and calls the populateGrid function based on said url.
-const getURLandPopuplate = (url) => {
-
+const getURLandPopuplate = (url:string) => {
+    
     // Regex read: url ending with the following regex
     let regexList = [/snowboards.html$/,/bindings.html$/, /helmets.html$/, /boots.html$/,/goggles.html$/] 
-
+    
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList]
-
+    
     regexList.forEach((regex, index) => {
-
+        
         if(regex.test(url)){         // If the current url ends with one of the regex.
-
             
             populateGrid(productList[index])
-
+            
         }
-
-
+        
+        
     })
-
+    
 }// window.location.href returns a string of the current url
 getURLandPopuplate(window.location.href)
 
-console.log(/bindings.html$/.test(window.location.href))
-console.log(window.location.href)
 
 
 
 // This function creates an HTML structure such as this one. This will be the product layout of the grid items.
 function createProductLayout  (product: Binding | Snowboard | Helmet | Goggle | Boot) {
     
-    /*<div class="main__product-item-grid main__product-flex-container">
-                    
-                <img class='main__flex-child-img' src="/images/bindings/union-force (1).jpg" alt="binding"></img>
-                <h3 class='main__flex-child-title'>Union Binding</h3>
+        /*<div class="main__product-item-grid main__product-flex-container">
+    
+    <img class='main__flex-child-img' src="/images/bindings/union-force (1).jpg" alt="binding"></img>
+    <h3 class='main__flex-child-title'>Union Binding</h3>
                 <p class="main__flex-child-price">$600</p>
     
     
@@ -109,6 +107,12 @@ function createProductLayout  (product: Binding | Snowboard | Helmet | Goggle | 
     overlay.appendChild(detail)
 
 }
+
+
+
+
+
+
 
 // Code for HamburguerButton click event. When clicked, it toggles header__nav-bar-ul-left active class
 const hamburguerButton = document.querySelector<HTMLSpanElement>('.header__hamburguer-button')

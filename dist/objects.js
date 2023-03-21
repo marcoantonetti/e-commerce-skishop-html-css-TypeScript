@@ -171,7 +171,7 @@ export const snowboardsList = [
     },
     {
         brand: "Capita",
-        model: "Defenders of Awesome Snowboard",
+        model: "Defenders of Awesome",
         size: ['L', 'M'],
         terrain: "All-Mountain",
         personality: "Aggressive",
