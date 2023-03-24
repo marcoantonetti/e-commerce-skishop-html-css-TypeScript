@@ -315,3 +315,16 @@ hr{
     }
 
 }
+
+@media(max-width: 500px){
+
+    .main__img-gallery:hover{
+
+
+        width: 25rem;
+
+    
+        
+    
+    }
+}
