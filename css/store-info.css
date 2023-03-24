@@ -182,7 +182,7 @@ input, textarea{
 
     }
 
-    .main__aside-vertical-ad{
+    .main__aside-vertical-ad.active{
             
         display: none;
 

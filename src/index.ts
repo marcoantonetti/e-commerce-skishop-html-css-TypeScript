@@ -23,6 +23,10 @@ const populateGrid = (gallery: Binding[] | Snowboard[] | Goggle[] | Boot[] | Hel
 const verticalAd = document.querySelector('.main__aside-vertical-ad');
 const getURLandPopuplate = (url:string) => {
     
+    // Eliminar vertical ad solo en esta pagina. Mucho lio con css.
+    if(/store-info.html$/.test(url)){
+        verticalAd.classList.toggle('active')
+    }
     // Regex read: url ending with the following regex
     let regexList = [/snowboards.html$/,/bindings.html$/, /helmets.html$/, /boots.html$/,/goggles.html$/] 
     
@@ -45,6 +49,7 @@ const getURLandPopuplate = (url:string) => {
 }// window.location.href returns a string of the current url
 getURLandPopuplate(window.location.href)
 
+console.log(window.location.href)
 
 // This function creates an HTML structure such as this one. This will be the product layout of the grid items.
 function createProductLayout  (product: Binding | Snowboard | Helmet | Goggle | Boot) {

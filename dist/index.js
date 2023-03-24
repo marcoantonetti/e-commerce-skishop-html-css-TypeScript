@@ -7,6 +7,9 @@ const populateGrid = (gallery) => {
 };
 const verticalAd = document.querySelector('.main__aside-vertical-ad');
 const getURLandPopuplate = (url) => {
+    if (/store-info.html$/.test(url)) {
+        verticalAd.classList.toggle('active');
+    }
     let regexList = [/snowboards.html$/, /bindings.html$/, /helmets.html$/, /boots.html$/, /goggles.html$/];
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList];
     regexList.forEach((regex, index) => {
@@ -16,6 +19,7 @@ const getURLandPopuplate = (url) => {
     });
 };
 getURLandPopuplate(window.location.href);
+console.log(window.location.href);
 function createProductLayout(product) {
     const flexContainer = document.createElement('div');
     const image = document.createElement('img');
