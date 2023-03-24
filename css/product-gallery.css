@@ -33,31 +33,36 @@ main {
     display: grid;
 
     grid-auto-flow: dense;
-    grid-auto-rows: 27rem;
+    grid-auto-rows: 27rem ;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) 12rem;
     gap: 2rem;
     margin-bottom: 5rem;
     margin-left: 1.5rem;
+
+
+
 }
+
 
 
 /* Aside (advertisements) elements positioning */
 .main__aside-vertical-ad {
 
-    grid-row: 1/-4;
+    grid-row: 1 / -4;
     grid-column-end: -1;
+
+
+    
+
+    display: flex;
 
     background: url('../images/ads/vertical-ad.jpg ');
 
     background-size: 100% 25rem;
     background-repeat: repeat;
-    
-
-
-
-
 
 }
+
 
 .main__aside-horizontal-ad {
     background-image: url("../images/ads/vertical-ad3.jpg");
@@ -88,6 +93,7 @@ main {
 
     box-shadow: 0.0rem 0.1rem 0.2rem black;
 }
+
 
 .main__product-item-grid:hover {
     transform: scale(1.1);
@@ -182,11 +188,18 @@ bottom: 1rem;
         grid-row: 1/5;
     }
 
+    
 }
 
 @media (max-width: 1040px) {
+    
     .main__aside-vertical-ad {
         grid-row: 1/7;
+    } 
+    .main__aside-vertical-ad.snowboards-url{
+        grid-row: 1/6 ;
+        border: red solid 3px;
+
     }
     
     @media (max-width: 765px) {
@@ -194,8 +207,14 @@ bottom: 1rem;
                 background-size: 100%;
                 
             }
-        .main__aside-vertical-ad {
+
+         .main__aside-vertical-ad.bindings-url {
             grid-row: 1/13;
+        } 
+
+        .main__aside-vertical-ad.snowboards-url{
+            grid-row: 1/11 ;
+    
         }
 
     }

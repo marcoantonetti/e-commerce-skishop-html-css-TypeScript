@@ -3,9 +3,9 @@ const containerGrid = document.querySelector('.main__product-container-grid');
 const populateGrid = (gallery) => {
     gallery.forEach((product) => {
         createProductLayout(product);
-        console.log('asd');
     });
 };
+const verticalAd = document.querySelector('.main__aside-vertical-ad');
 const getURLandPopuplate = (url) => {
     let regexList = [/snowboards.html$/, /bindings.html$/, /helmets.html$/, /boots.html$/, /goggles.html$/];
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList];

@@ -34,7 +34,6 @@
     top: 0.1rem;
 }
 
-/* I added a bit of box-modelling to this flex positions*/
 .footer__flex-container{
     display: flex;
     justify-content: space-around;
@@ -61,7 +60,6 @@
     list-style-type: none;
 }
 
-/*Codigo repetitivo fijate que hacer*/
 .footer__p-contact:hover .footer__link, .footer__li-help:hover .footer__link{
     color: var(--white-color );
 }

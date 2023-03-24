@@ -12,13 +12,15 @@ const populateGrid = (gallery: Binding[] | Snowboard[] | Goggle[] | Boot[] | Hel
     gallery.forEach((product) => {
         createProductLayout(product)
 
-        console.log('asd')
         
     })
 }
 
 
+
+
 // This takes the current url as a parameter and calls the populateGrid function based on said url.
+const verticalAd = document.querySelector('.main__aside-vertical-ad');
 const getURLandPopuplate = (url:string) => {
     
     // Regex read: url ending with the following regex
@@ -31,6 +33,9 @@ const getURLandPopuplate = (url:string) => {
         if(regex.test(url)){         // If the current url ends with one of the regex.
             
             populateGrid(productList[index])
+    
+
+
             
         }
         
@@ -39,8 +44,6 @@ const getURLandPopuplate = (url:string) => {
     
 }// window.location.href returns a string of the current url
 getURLandPopuplate(window.location.href)
-
-
 
 
 // This function creates an HTML structure such as this one. This will be the product layout of the grid items.
