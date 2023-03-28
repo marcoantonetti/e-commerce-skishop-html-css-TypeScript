@@ -24,8 +24,8 @@ const verticalAd = document.querySelector('.main__aside-vertical-ad');
 const getURLandPopuplate = (url:string) => {
     
     // Eliminar vertical ad solo en esta pagina. Mucho lio con css.
-    if(/store-info.html$/.test(url)){
-        verticalAd.classList.toggle('active')
+       if(/store-info.html$/.test(url) || /form__input/.test(url) || /newsletter/.test(url)){ 
+        verticalAd.classList.toggle('display')
     }
     // Regex read: url ending with the following regex
     let regexList = [/snowboards.html$/,/bindings.html$/, /helmets.html$/, /boots.html$/,/goggles.html$/] 
@@ -150,3 +150,31 @@ glassLogo?.addEventListener('click', () => {
 
 
 
+// Code for carousel slider on store-info.html
+// I work with data sets so that this code can work with any carousel on this or future pages
+const buttons = document.querySelectorAll<HTMLElement>('[data-carousel-button]')
+
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+       
+        const offset = button.dataset.carouselButton === 'next' ? 1 : -1;
+        const slides = button
+                             .closest<HTMLElement>('[data-carousel]')
+                             .querySelector<HTMLElement>('[data-slides]')
+
+        const activeSlide = slides.querySelector<HTMLElement>('.active')
+    
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset
+        activeSlide.classList.toggle('active')
+
+        // This conditionals make a loop. So that clicking next on the last picture goes to the first and viceversa
+        if (newIndex < 0 ) {newIndex = slides.children.length -1}
+        if(newIndex >= slides.children.length) {newIndex = 0}
+
+        slides.children[newIndex].classList.toggle('active');
+
+        
+    })
+
+
+})

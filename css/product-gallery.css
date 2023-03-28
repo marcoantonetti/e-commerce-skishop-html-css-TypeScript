@@ -11,20 +11,7 @@ main {
     justify-content: space-between;
 }
 
-.main__filter-dropdown {
-    margin-right: 15rem;
-}
 
-.main__filter-dropdown select {
-    padding: 0.3rem;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-.main__filter-dropdown option {
-    font-weight: bold;
-    font-size: 1rem;
-}
 
 /* Grid */
 /*  Grid for entire product gallery and aside advertisement */
@@ -33,7 +20,7 @@ main {
     display: grid;
 
     grid-auto-flow: dense;
-    grid-auto-rows: 27rem ;
+    grid-auto-rows: 27rem;
     grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) 12rem;
     gap: 2rem;
     margin-bottom: 5rem;
@@ -48,11 +35,11 @@ main {
 /* Aside (advertisements) elements positioning */
 .main__aside-vertical-ad {
 
-    grid-row: 1 / -4;
+    grid-row: 1 / -3;
     grid-column-end: -1;
 
 
-    
+
 
     display: flex;
 
@@ -109,21 +96,25 @@ main {
     box-shadow: 0.1rem 0.1rem 0.8rem black, -0.1rem -0.1rem 0.8rem black;
 }
 
-.main__flex-child-title{
+.main__flex-child-title {
     position: absolute;
     bottom: 5.5rem;
 }
 
 .main__flex-child-subtitle {
-   
+
     position: absolute;
     bottom: 4.1rem;
 
 }
 
 .main__flex-child-price {
-position: absolute;
-bottom: 1rem;
+    position: absolute;
+    bottom: 1rem;
+
+    font-size: 1.2rem;
+    font-weight: 600;
+
 }
 
 /* On hover there will be an overlay with a grey background and two <a> */
@@ -183,71 +174,29 @@ bottom: 1rem;
 
 
 /* Media queries */
-@media (max-width: 1280px) {
-    .main__aside-vertical-ad {
-        grid-row: 1/5;
-    }
 
-    
-}
 
-@media (max-width: 1040px) {
-    
-    .main__aside-vertical-ad {
-        grid-row: 1/7;
-    } 
-    .main__aside-vertical-ad.snowboards-url{
-        grid-row: 1/6 ;
-        border: red solid 3px;
 
-    }
-    
-    @media (max-width: 765px) {
-        .main__aside-horizontal-ad {
-                background-size: 100%;
-                
-            }
-
-         .main__aside-vertical-ad.bindings-url {
-            grid-row: 1/13;
-        } 
-
-        .main__aside-vertical-ad.snowboards-url{
-            grid-row: 1/11 ;
-    
-        }
+@media (max-width: 765px) {
+    .main__aside-horizontal-ad {
+        background-size: 100%;
 
     }
 }
 
 @media (max-width: 570px) {
-    
+
 
     .main__product-container-grid {
         grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 
     }
 
-    /* Changing ad position */
-    .main__aside-vertical-ad {
-
-        grid-row: 5/6;
-        grid-column: 1/2;
-
-        background-repeat: no-repeat;
-
-        background-position: center;
-        background-size: contain;
-
-
-
-
-    }
 
     .main__aside-horizontal-ad {
 
-        background-size: 100% ;
-        
+        background-size: 100%;
+
     }
 
     .main__filter-dropdown {

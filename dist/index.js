@@ -7,8 +7,8 @@ const populateGrid = (gallery) => {
 };
 const verticalAd = document.querySelector('.main__aside-vertical-ad');
 const getURLandPopuplate = (url) => {
-    if (/store-info.html$/.test(url)) {
-        verticalAd.classList.toggle('active');
+    if (/store-info.html$/.test(url) || /form__input/.test(url) || /newsletter/.test(url)) {
+        verticalAd.classList.toggle('display');
     }
     let regexList = [/snowboards.html$/, /bindings.html$/, /helmets.html$/, /boots.html$/, /goggles.html$/];
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList];
@@ -65,5 +65,24 @@ const glassLogo = document.querySelector('.fa-magnifying-glass');
 glassLogo === null || glassLogo === void 0 ? void 0 : glassLogo.addEventListener('click', () => {
     console.log('as');
     searchBar === null || searchBar === void 0 ? void 0 : searchBar.classList.toggle('active');
+});
+const buttons = document.querySelectorAll('[data-carousel-button]');
+buttons.forEach(button => {
+    button.addEventListener('click', () => {
+        const offset = button.dataset.carouselButton === 'next' ? 1 : -1;
+        const slides = button
+            .closest('[data-carousel]')
+            .querySelector('[data-slides]');
+        const activeSlide = slides.querySelector('.active');
+        let newIndex = [...slides.children].indexOf(activeSlide) + offset;
+        activeSlide.classList.toggle('active');
+        if (newIndex < 0) {
+            newIndex = slides.children.length - 1;
+        }
+        if (newIndex >= slides.children.length) {
+            newIndex = 0;
+        }
+        slides.children[newIndex].classList.toggle('active');
+    });
 });
 //# sourceMappingURL=index.js.map

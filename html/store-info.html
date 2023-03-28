@@ -26,6 +26,7 @@
 
 
 
+
     <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
     <script src="https://kit.fontawesome.com/a494238601.js" crossorigin="anonymous"></script>
 
@@ -57,11 +58,11 @@
 
                 <ul class='header__nav-bar-ul-right'>
                     
-                    <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i
+                    <li class="header__nav-bar-li"><a class="header__link" href="store-info.html"><i
                                 class="fa-solid fa-location-dot"></i></a></li>
-                    <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i
+                    <li class="header__nav-bar-li"><a class="header__link" href=""><i
                                 class="fa-solid fa-cart-shopping"></i></a></li>
-                    <li class="header__nav-bar-li"><a class="header__link" href="shopping-cart.html"><i
+                    <li class="header__nav-bar-li"><a class="header__link" href=""><i
                                 class="fa-solid fa-user"></i></a></li>
 
                 </ul>
@@ -122,10 +123,19 @@
 
                     </div>
 
-                    <div class="main__div-carousel">
+                    <div class="main__div-carousel" data-carousel>
 
-                        <img src="/images/ofertas.jpg" alt="">
+                        <button class="main__button-carousel prev" data-carousel-button="prev"><i class="fa-solid fa-arrow-left"></i></button>
+                        <button class="main__button-carousel next" data-carousel-button="next"><i class="fa-solid fa-arrow-right"></i></button>
 
+
+                        <ul class="main__ul-carousel-slide" data-slides>
+                            <li class="main__li-carousel-slide active"><img src="/images/snow-shop/darkside.jpg" alt="shop picture"></li>
+                            <li class="main__li-carousel-slide"><img src="/images/snow-shop/download.jpg" alt="shop picture"></li>
+                            <li class="main__li-carousel-slide"><img src="/images/snow-shop/images.jpg" alt="shop picture"></li>
+                            <li class="main__li-carousel-slide"><img src="/images/snow-shop/recreation2-1-c182b4fe7912e1aa.jpg" alt="shop picture"></li>
+
+                        </ul>
                     </div>
 
                 </section>
@@ -170,6 +180,7 @@
                                 </div>
 
                             </div>
+                            <input type="submit" class="form__submit query"></input>
                         </form>
                     </div>
 
