@@ -12,9 +12,11 @@ const getURLandPopuplate = (url) => {
     if (/store-info.html$/.test(url) || /form__input/.test(url) || /newsletter/.test(url)) {
         verticalAd.classList.toggle('display');
     }
-    let regexList = [/snowboards.html$/, /bindings.html$/, /helmets.html$/, /boots.html$/, /goggles.html$/, /snowboards$/, /bindings$/, /helmets$/, /boots$/, /goggles$/];
+    let regexList = [/snowboards.html$/, /bindings.html$/, /helmets.html$/, /boots.html$/, /goggles.html$/,
+        /snowboards$/, /bindings$/, /helmets$/, /boots$/, /goggles$/];
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList];
     regexList.forEach((regex, index) => {
+        console.log('hola');
         if (regex.test(url)) {
             populateGrid(productList[index]);
         }
