@@ -29,7 +29,7 @@ const getURLandPopuplate = (url:string) => {
         verticalAd.classList.toggle('display')
     }
     // Regex read: url ending with the following regex
-    let regexList = [/snowboards.html$/,/bindings.html$/, /helmets.html$/, /boots.html$/,/goggles.html$/] 
+    let regexList = [/snowboards.html$/,/bindings.html$/, /helmets.html$/, /boots.html$/,/goggles.html$/,/snowboards$/,/bindings$/, /helmets$/, /boots$/,/goggles$/ ] 
     
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList]
     
