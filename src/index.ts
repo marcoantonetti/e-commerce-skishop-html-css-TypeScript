@@ -30,21 +30,19 @@ const getURLandPopuplate = (url:string) => {
     }
     // Regex read: url ending with the following regex
     let regexList = [ /snowboards.html$/,/bindings.html$/, /helmets.html$/, /boots.html$/,/goggles.html$/,
-                      /snowboards$/,/bindings$/, /helmets$/, /boots$/,/goggles$/ ] 
+                      /snowboards$/,/bindings$/, /helmets$/, /boots$/,/goggles$/ ] ;
     
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList]
+
+    console.log('hola')
     
     regexList.forEach((regex, index) => {
 
-        console.log('hola')
+        console.log('chau')
         
         if(regex.test(url)){         // If the current url ends with one of the regex.
             
-            populateGrid(productList[index])
-    
-
-
-            
+            populateGrid(productList[index])           
         }
         
         

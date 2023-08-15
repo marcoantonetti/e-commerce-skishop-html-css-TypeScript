@@ -16,7 +16,7 @@ const getURLandPopuplate = (url) => {
         /snowboards$/, /bindings$/, /helmets$/, /boots$/, /goggles$/];
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList];
     regexList.forEach((regex, index) => {
-        console.log('hola');
+        console.log('chau');
         if (regex.test(url)) {
             populateGrid(productList[index]);
         }
