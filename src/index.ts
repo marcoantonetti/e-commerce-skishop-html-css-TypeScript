@@ -45,6 +45,7 @@ const getURLandPopuplate = (url:string) => {
         if(regex.test(url)){     
                 // If the current url ends with one of the regex.
                 console.log('productList en el if:  ', productList)
+                console.log('index', index)
 
                 console.log('productListIndex:  ', productList[index])
                 populateGrid(productList[index])           
