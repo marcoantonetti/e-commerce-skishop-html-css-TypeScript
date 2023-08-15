@@ -1,7 +1,7 @@
 import { snowboardsList, BindingsList, helmetsList, BootsList, GogglesList } from "./objects.js";
 const containerGrid = document.querySelector('.main__product-container-grid');
-console.log('as');
 const populateGrid = (gallery) => {
+    console.log(gallery);
     gallery.forEach((product) => {
         createProductLayout(product);
         console.log('as');
@@ -15,9 +15,10 @@ const getURLandPopuplate = (url) => {
     let regexList = [/snowboards.html$/, /bindings.html$/, /helmets.html$/, /boots.html$/, /goggles.html$/,
         /snowboards$/, /bindings$/, /helmets$/, /boots$/, /goggles$/];
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList];
+    console.log('hola');
     regexList.forEach((regex, index) => {
-        console.log('chau');
         if (regex.test(url)) {
+            console.log('chau');
             populateGrid(productList[index]);
         }
     });
