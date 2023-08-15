@@ -1,8 +1,10 @@
 import { snowboardsList, BindingsList, helmetsList, BootsList, GogglesList } from "./objects.js";
 const containerGrid = document.querySelector('.main__product-container-grid');
+console.log('as');
 const populateGrid = (gallery) => {
     gallery.forEach((product) => {
         createProductLayout(product);
+        console.log('as');
     });
 };
 const verticalAd = document.querySelector('.main__aside-vertical-ad');

@@ -4,13 +4,14 @@ import { snowboardsList, BindingsList, helmetsList, BootsList, GogglesList } fro
 
 const containerGrid = document.querySelector<HTMLDivElement>('.main__product-container-grid')
 
-
+console.log('as')
 
 // This function populates the grid gallery with multiple products layouts (grid items)
 const populateGrid = (gallery: Binding[] | Snowboard[] | Goggle[] | Boot[] | Helmet[] ) =>{
     
     gallery.forEach((product) => {
         createProductLayout(product)
+        console.log('as')
 
         
     })
