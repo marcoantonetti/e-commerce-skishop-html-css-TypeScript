@@ -18,6 +18,7 @@ const getURLandPopuplate = (url) => {
     console.log('productList:  ', productList);
     regexList.forEach((regex, index) => {
         if (regex.test(url)) {
+            console.log('productList en el if:  ', productList);
             console.log('productListIndex:  ', productList[index]);
             populateGrid(productList[index]);
         }
