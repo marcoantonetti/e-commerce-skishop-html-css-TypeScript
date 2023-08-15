@@ -1,1 +1,7 @@
-hola santi
+A ski shop e-commerce done purely with html, css and JS. 
+
+Multiple html pages styled with CSS in order to provide a beautiful user interface. It has a landing page, multiple product pages and a contact / newsletter page. It has several animations.
+
+JS displays the product layout by generating it from a product array. Also I used JS to enhance the css/html features and its interaction with the DOM.
+
+The code is well commented and its functions and classes are well named and scalable. So that its quite straight forward for any developer to understand and scale up this code.
