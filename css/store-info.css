@@ -139,8 +139,8 @@ input, textarea{
 
 	.main__button-carousel{
 		position: absolute;
-		z-index: 1;
 		top: 11.5rem;
+		z-index: 1;
 
         
 	    transform:scale(1.3);
