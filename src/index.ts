@@ -32,8 +32,12 @@ const getURLandPopuplate = (url:string) => {
         verticalAd.classList.toggle('display')
     }
     // Regex read: url ending with the following regex
-    let regexList = [ /snowboards.html$/,/bindings.html$/, /helmets.html$/, /boots.html$/,/goggles.html$/,
-                      /snowboards$/,/bindings$/, /helmets$/, /boots$/,/goggles$/ ] ;
+
+    // this regex list is for the live local server url
+    let regexList = [ /snowboards.html$/,/bindings.html$/, /helmets.html$/, /boots.html$/,/goggles.html$/ ] ;
+    
+    //This regex list is for the hosting url on netifly
+    let regexList2 = [/snowboards$/,/bindings$/, /helmets$/, /boots$/,/goggles$/]
     
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList]
 
@@ -44,10 +48,21 @@ const getURLandPopuplate = (url:string) => {
         
         if(regex.test(url)){     
                 // If the current url ends with one of the regex.
-                console.log('productList en el if:  ', productList)
-                console.log('index', index)
 
-                console.log('productListIndex:  ', productList[index])
+                populateGrid(productList[index])           
+        }
+        
+        
+    })
+
+    regexList2.forEach((regex, index) => {
+
+        console.log('hola')
+        
+        if(regex.test(url)){     
+                // If the current url ends with one of the regex.
+                console.log('holaw')
+
                 populateGrid(productList[index])           
         }
         
