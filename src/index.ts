@@ -4,12 +4,14 @@ import { snowboardsList, BindingsList, helmetsList, BootsList, GogglesList } fro
 
 const containerGrid = document.querySelector<HTMLDivElement>('.main__product-container-grid')
 
-console.log('as')
 
 // This function populates the grid gallery with multiple products layouts (grid items)
 const populateGrid = (gallery: Binding[] | Snowboard[] | Goggle[] | Boot[] | Helmet[] ) =>{
+
+    console.log(gallery)
     
     gallery.forEach((product) => {
+        
         createProductLayout(product)
         console.log('as')
 
@@ -26,6 +28,7 @@ const getURLandPopuplate = (url:string) => {
     
     // Eliminar vertical ad solo en esta pagina. Mucho lio con css.
        if(/store-info.html$/.test(url) || /form__input/.test(url) || /newsletter/.test(url)){ 
+
         verticalAd.classList.toggle('display')
     }
     // Regex read: url ending with the following regex
@@ -38,10 +41,10 @@ const getURLandPopuplate = (url:string) => {
     
     regexList.forEach((regex, index) => {
 
-        console.log('chau')
         
-        if(regex.test(url)){         // If the current url ends with one of the regex.
-            
+        if(regex.test(url)){     
+                // If the current url ends with one of the regex.
+            console.log('chau')            
             populateGrid(productList[index])           
         }
         
