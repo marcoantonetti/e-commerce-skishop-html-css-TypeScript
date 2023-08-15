@@ -15,7 +15,7 @@ const getURLandPopuplate = (url) => {
     let regexList = [/snowboards.html$/, /bindings.html$/, /helmets.html$/, /boots.html$/, /goggles.html$/,
         /snowboards$/, /bindings$/, /helmets$/, /boots$/, /goggles$/];
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList];
-    console.log('hola');
+    console.log('productList:  ', productList);
     regexList.forEach((regex, index) => {
         if (regex.test(url)) {
             console.log('chau');

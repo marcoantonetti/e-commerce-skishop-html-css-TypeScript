@@ -37,7 +37,7 @@ const getURLandPopuplate = (url:string) => {
     
     let productList = [snowboardsList, BindingsList, helmetsList, BootsList, GogglesList]
 
-    console.log('hola')
+    console.log('productList:  ', productList)
     
     regexList.forEach((regex, index) => {
 
